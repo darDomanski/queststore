@@ -67,6 +67,24 @@ table {
 }
 
 /*
+========================================
+4 Clearfix
+========================================
+*/
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  clear: both;
+  *zoom: 1;
+}
+
+/*
 ==================================
 2 Login page
 ==================================
@@ -79,16 +97,136 @@ table {
 }
 
 .login-page h2 {
-  font: 300 20px/24px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 300 30px/33px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: auto;
   margin-top: 155px;
   padding-bottom: 33px;
-
 }
 
 .login-page .login-form .login {
   display: flex;
   flex-flow: column;
-  border: 1px solid rgb(27, 16, 180);
+  border: 2px solid rgb(27, 16, 180);
+  border-radius: 5px;
   margin: auto;
+  width: 300px;
+  height: 250px;
+}
+
+.login label {
+  font: 400 16px/18px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding-top: 15px;
+}
+
+.login input {
+  border-radius: 5px;
+  margin: auto;
+  margin-top: 20px;
+  
+}
+
+/*
+==================================
+4 Table
+==================================
+*/
+.your-group {
+  display: flex;
+  justify-content: center;
+}
+
+table caption {
+  font: 24px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: #4a4a4a;
+  font: 14px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+th, td {
+  padding: 10px 15px;
+  vertical-align: middle;
+}
+
+thead {
+  background: #cecbcb;
+  background: linear-gradient(#ebe8e8, #cecbcb);
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+tbody tr:nth-child(even) {
+  background: #f0f0f2;
+}
+
+tbody tr {
+  border-bottom: 1px solid #cecfd5;
+}
+/*
+==================================
+4 Mentor profile
+==================================
+*/
+.mentor-data .grid {
+  display: flex;
+
+}
+.mentor-profile-picture img {
+  border-radius: 50%;
+  height: 120;
+  margin-left: 30px;
+}
+
+.mentor-data h2 {
+  margin: 30px 0 0 66px;
+  font: 400 30px/32px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/*
+==================================
+4 Nav bar in Mentor
+==================================
+*/
+
+ul#menu {
+  height: 60px;
+  border-bottom: double;
+  background-color:lightgray;
+}
+
+div#creepymenu li {
+    float: left;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 80px;
+    padding-left: 20px;
+    list-style-type: none;
+    font-size: 12px;  
+    width: max-content;
+
+  }
+
+
+div#creepymenu {
+  height: 10%;
+}
+
+a#active {
+  text-decoration: none; 
+  color: brown;
+  font-size: 20px;
+}
+
+a.unactive {
+  text-decoration: none; 
+  color: black;
+  font-size: 20px;
+}
+
+a.unactive:hover,:active  {
+  color: blue;
+
 }
