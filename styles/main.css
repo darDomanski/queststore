@@ -65,3 +65,30 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+/*
+==================================
+2 Login page
+==================================
+*/
+
+.login-page {
+  display: flex;
+  flex-flow: column;
+  
+}
+
+.login-page h2 {
+  font: 300 20px/24px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: auto;
+  margin-top: 155px;
+  padding-bottom: 33px;
+
+}
+
+.login-page .login-form .login {
+  display: flex;
+  flex-flow: column;
+  border: 1px solid rgb(27, 16, 180);
+  margin: auto;
+}
