@@ -247,3 +247,26 @@ a.unactive:hover,:active  {
 5 inventory in student profile
 ==================================
 */
+.coolcoins {
+  display: flex;
+  margin-top: 33px;
+  border-top: 1px solid #4a4a4a;
+}
+
+.artifacts {
+  display: flex;
+  margin-top: 33px;
+  border-top: 1px solid #4a4a4a;
+}
+.coolcoins table,
+.artifacts table,
+.quests table {
+  margin-left: 45%;
+}
+
+.quests {
+  display: flex;
+  margin-top: 33px;
+  border-top: 1px solid #4a4a4a;
+}
+
