@@ -97,13 +97,13 @@ table {
 }
 
 .login-page h2 {
-  font: 300 30px/33px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 600 40px/33px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: auto;
   margin-top: 155px;
   padding-bottom: 33px;
 }
 
-.login-page .login-form .login {
+.login {
   display: flex;
   flex-flow: column;
   border: 2px solid rgb(27, 16, 180);
@@ -116,12 +116,17 @@ table {
 .login label {
   font: 400 16px/18px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   padding-top: 15px;
+  margin: auto;
+  margin-left: 12px;
 }
 
 .login input {
+  display: block;
   border-radius: 5px;
   margin: auto;
-  margin-top: 20px;
+  margin-top: 12px;
+  width: 80%;
+  padding: 5px 8px;
   
 }
 
