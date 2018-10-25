@@ -2,18 +2,15 @@
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 1  Reset      
-2  Typography 
-3  Grid
-4  Clearfix
-5  Primary Header
-6  Navigation
-7  Home
-8  
-9  Primary Footer
-10 Links
-11 Contact us
-12 Buttons
-13 About
+2  Clearfix
+3  Login page 
+4  new form
+5  Table
+6  Mentor/Student profile bar
+7  Nav bar in Mentor
+8  inventory in student profile
+9  
+
 
 ==================================
 1.0 Reset
@@ -65,3 +62,237 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+/*
+========================================
+2 Clearfix
+========================================
+*/
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  clear: both;
+  *zoom: 1;
+}
+
+/*
+==================================
+3 Login page 
+==================================
+Label input in new form are afecting input display
+in this page
+*/
+
+.login-page {
+  display: flex;
+  flex-flow: column;
+}
+.login-page h2 {
+  font: 600 40px/33px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: auto;
+  margin-top: 155px;
+  padding-bottom: 33px;
+}
+.login {
+  display: flex;
+  flex-flow: column;
+  border: 2px solid rgb(27, 16, 180);
+  border-radius: 5px;
+  margin: auto;
+  width: 20%;
+  height: 30%;
+}
+.login label {
+  font: 400 16px/18px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding-top: 15px;
+  margin: auto;
+  margin-left: 12px;
+}
+.login input {
+  display: block;
+  border-radius: 5px;
+  margin: auto;
+  margin-top: 12px;
+  width: 80%;
+  padding: 5px 8px;
+}
+/*
+==================================
+4 new form
+==================================
+*/
+
+.add-new {
+  display: flex;
+  flex-flow: column;
+}
+
+.add-new h2 {
+  margin: auto;
+  font: 600 40px/33px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.add-new-form {
+  display: flex;
+  flex-flow: column;
+  width: 30%;
+  margin: auto;
+}
+.name-surname {
+  display: flex;
+  flex-flow: column;
+}
+label input{
+  display: flex;
+  border-radius: 5px;
+  width: 50%;
+  margin: 5px 10px 10px 10px;
+}
+.add-member-button {
+  margin-top: 3%;
+}
+
+/*
+==================================
+5 Table in mentor
+==================================
+*/
+.your-group {
+  display: flex;
+  justify-content: center;
+}
+table caption {
+  font: 24px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: #4a4a4a;
+  font: 14px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+th, td {
+  padding: 10px 15px;
+  vertical-align: middle;
+}
+thead {
+  background: #cecbcb;
+  background: linear-gradient(#ebe8e8, #cecbcb);
+  font-size: 11px;
+  text-transform: uppercase;
+}
+tbody tr:nth-child(even) {
+  background: #f0f0f2;
+}
+tbody tr {
+  border-bottom: 1px solid #cecfd5;
+}
+a.button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+
+  text-decoration: none;
+  color: initial;
+  width: 33%;
+}
+/*
+==================================
+6 Mentor/Student profile bar
+==================================
+*/
+.grid {
+  display: flex;
+
+}
+.profile-picture img {
+  border-radius: 50%;
+  height: 120;
+  margin-left: 30px;
+}
+.data h2 {
+  margin: 30px 0 0 66px;
+  font: 400 30px/32px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.data .grid .email {
+  color: #888787;
+  font: 400 16px/32px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 15px 0 0 66px;
+}
+
+/*
+==================================
+7 Nav bar in Mentor
+==================================
+*/
+
+ul#menu {
+  height: 60px;
+  border-bottom: double;
+  background-color:lightgray;
+}
+
+div#creepymenu li {
+    float: left;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 80px;
+    padding-left: 20px;
+    list-style-type: none;
+    font-size: 12px;  
+    width: max-content;
+  }
+div#creepymenu {
+  height: 10%;
+}
+a#active {
+  text-decoration: none; 
+  color: brown;
+  font-size: 20px;
+}
+
+a.unactive {
+  text-decoration: none; 
+  color: black;
+  font-size: 20px;
+}
+
+a.unactive:hover,:active  {
+  color: blue;
+
+}
+
+/*
+==================================
+8 inventory in student profile
+==================================
+*/
+.coolcoins {
+  display: flex;
+  margin-top: 33px;
+  border-top: 1px solid #4a4a4a;
+}
+.artifacts {
+  display: flex;
+  margin-top: 33px;
+  border-top: 1px solid #4a4a4a;
+}
+.coolcoins table,
+.artifacts table,
+.quests table {
+  margin-left: 45%;
+}
+.quests {
+  display: flex;
+  margin-top: 33px;
+  border-top: 1px solid #4a4a4a;
+}
+
