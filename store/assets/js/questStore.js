@@ -1,6 +1,6 @@
 function dzialam(){
 	if(this.nextElementSibling.classList.contains('hide')){
-		var size = ((Math.ceil(this.nextElementSibling.getElementsByClassName("thumbnail").length/3)+1) * document.getElementsByClassName("thumbnail")[0].clientHeight)  + "px";
+		var size = ((Math.ceil(this.nextElementSibling.getElementsByClassName("thumbnail").length/3)+0.5) * document.getElementsByClassName("thumbnail")[0].clientHeight)  + "px";
 		this.nextElementSibling.classList.add('show');
 		this.nextElementSibling.classList.remove('hide');
 		this.nextElementSibling.setAttribute("style","height:"+size);
