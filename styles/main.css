@@ -203,6 +203,11 @@ a.button {
   color: initial;
   width: 33%;
 }
+.student-name a{
+ text-decoration: none;
+ font: 18px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+ color: #4a4a4a;
+}
 /*
 ==================================
 6 Mentor/Student profile bar
