@@ -266,6 +266,154 @@ td[name="button"] {
 }
 
 
+/* group page */
+
+div#group-menu {
+  background-color: black;
+    margin-left: 200px;
+    margin-top: 50px;
+    margin-right:200px;
+    width: 800px;
+    border: solid;
+    
+}
+
+
+
+div#group-menu h1 {
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 50px;
+  font-size: 50px;
+  text-align: center;
+  color: aliceblue;
+}
+
+
+button[name="add-group"] {
+  position: relative;
+  top:0px;
+  left: 450px;
+  width: 300px;
+  height: 100px;
+  border-bottom: solid;
+  border-left: solid;
+  border-right: solid;
+  border-top: none;
+  border-color: black;
+  font-size: 20px;
+  
+}
+button[name="add-group-button"]{
+  position: relative;
+  top: 31px;
+  left: 350px;
+}
+
+button[name="add-group"]:hover {
+  background-color: aliceblue;
+}
+
+button[name="add-group-button"] a{
+  color: black;
+  font-size: 20px;
+  text-decoration: none;
+  cursor: pointer;
+ 
+}
+
+li.group {
+  color: aliceblue;
+    width: 795px;
+    text-align: center;
+    background-color: brown;
+    height: 50px;
+    font-size: 30px;
+    border: solid;
+    margin: 0px;
+    text-align: center;
+    padding-top: 5px;
+}
+
+li.group p {
+  padding-top: 10px;
+}
+
+
+
+i.fas.fa-arrow-circle-down {
+  float: left;
+  padding-left: 30px;
+  padding-top: 10px;
+  color: aliceblue;
+}
+
+i.fas.fa-arrow-circle-down a {
+  cursor: pointer;
+  position: relative;
+  top: 25px;
+  
+}
+
+button[name=add-mentor-to-group] {
+  float: right;
+}
+
+i.fas.fa-plus-circle{
+ 
+ padding-left: 30px;
+  padding-top: 10px;
+  color: aliceblue;
+  
+}
+
+i.fas.fa-plus-circle a{ 
+  cursor: pointer;
+  position: relative;
+  top: 25px;
+  
+
+}
+
+
+
+ul[name="groups-list"] {
+  display: flex;
+  flex-direction: column;
+}
+
+li.group {
+  display: flex;
+  justify-content: space-around;
+
+}
+
+i.fas.fa-plus-circle {
+  color: aliceblue;
+  margin-left: auto;
+  
+}
+
+ul.mentors-from-group {
+  display: none;
+  flex-direction: column;
+}
+
+li.group p {
+  padding-top: 10px;
+  margin-left: auto;
+}
+
+.add-mentor-to-group {
+
+  margin-left: auto;
+  margin-right: 30px;
+}
+
+
+
+
+
 
 
 
