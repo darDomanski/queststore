@@ -98,6 +98,16 @@ body{
   height: 500px;
 }
 /*navbar*/
+#header-navbar{
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  top: 0;
+
+}
+#container{
+  margin-top:100px;
+}
 #cssmenu,
 #cssmenu ul,
 #cssmenu ul li,
@@ -122,19 +132,27 @@ body{
 }
 
 #shop-name {
-  position: absolute !important;
-  width: 100%;
-  pointer-events: none; 
+  z-index: 4;
+  flex-basis:33%;
+  flex-grow:1;
 }
 
-#shop-name a {
+#shop-name p {
   text-align:center;
 }
 
 #cssmenu {
+  display:flex;
   width: auto;
   height: 59px;
   padding-bottom: 4px;
+  background: #222222;
+  background: -moz-linear-gradient(top, #555555 0%, #222222 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #555555), color-stop(100%, #222222));
+  background: -webkit-linear-gradient(top, #555555 0%, #222222 100%);
+  background: -o-linear-gradient(top, #555555 0%, #222222 100%);
+  background: -ms-linear-gradient(top, #555555 0%, #222222 100%);
+  background: linear-gradient(to bottom, #555555 0%, #222222 100%);
 }
 #cssmenu.align-right {
   float: right;
@@ -148,26 +166,27 @@ body{
 #cssmenu.align-right ul li:first-child > a {
   border-bottom-right-radius: 3px;
 }
-#cssmenu #bg-one,
-#cssmenu #bg-two,
-#cssmenu #bg-three,
-#cssmenu #bg-four {
+#header-navbar #bg-one,
+#header-navbar #bg-two,
+#header-navbar #bg-three,
+#header-navbar #bg-four {
   position: absolute;
   bottom: 0;
   width: 100%;
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
 }
-#cssmenu #bg-one {
-  height: 10px;
+#header-navbar #bg-one {
+  height: 5px;
   background: #0f71ba;
+  z-index: 5;
 }
-#cssmenu #bg-two {
+#header-navbar #bg-two {
   height: 59px;
   z-index: 2;
   background: url('images/bg.png');
 }
-#cssmenu #bg-three {
+#header-navbar #bg-three {
   bottom: 4px;
   height: 55px;
   z-index: 3;
@@ -179,7 +198,7 @@ body{
   background: -ms-linear-gradient(top, #555555 0%, #222222 100%);
   background: linear-gradient(to bottom, #555555 0%, #222222 100%);
 }
-#cssmenu #bg-four {
+#header-navbar #bg-four {
   bottom: 4px;
   height: 55px;
   z-index: 4;
@@ -231,4 +250,40 @@ body{
   width:100%;
   height:60px;   /* Height of the footer */
   background:#6cf;
+}
+
+#my-progress{
+  z-index:4;
+  flex-basis:31%;
+  flex-grow:1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap-reverse;
+}
+
+#my-bar-frame {
+    width: 40%;
+    background-color: grey;
+}
+
+#my-bar {
+    width: 40%;
+    height: 30px;
+    background-color: green;
+}
+
+#menu-options{
+  flex-basis:33%;
+}
+
+#profile-pic {
+  margin-right: 30px;
+  margin-left: 10px;
+  margin-top: 15px;
+  height: 50%;
+  border-radius: 100%;
+  z-index: 4;
+  flex-basis: 1%;
+  border: 1px solid green;
 }
