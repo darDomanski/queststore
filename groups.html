@@ -9,7 +9,7 @@
     <meta name="keywords" content="Quest store,Codecool"/>
     <meta name="description" content="quest store Codecool System"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-
+    <script src="scripts/main.js"></script>
 </head>
 <body>
     
@@ -30,50 +30,51 @@
     <h1>Groups:</h1>
     <ul name="groups-list">
         <li class="group">
-            <a href="#3"><i class="fas fa-arrow-circle-down"></i></a>
+            <a href="#3" onclick="showGroupContent('group-description-1')"><i class="fas fa-arrow-circle-down"></i></a>
             <p>Group 1</p>
             <a class="add-mentor-to-group" href="#6"><i class="fas fa-plus-circle"></i></a>
-            <div class="group-description">
-                    <ul class="mentors-from-group">
-                        <li>
-                            <p class="mentor-description">Dawid Murek</p>
-                        </li>
-                        <li>
-                            <p class="mentor-description">Jerzy Dudek</p>>
-                        </li>
-                    </ul>
-            </div>
         </li>
+        <div class="group-description">
+                <ul id="group-description-1" class="mentors-from-group">
+                    <li>
+                        <p class="mentor-description">Dawid Murek</p>
+                    </li>
+                    <li>
+                        <p class="mentor-description">Jerzy Dudek</p>
+                    </li>
+                </ul>
+        </div>
         <li class="group">
-            <a href="#4"><i class="fas fa-arrow-circle-down"></i></a>
+            <a href="#4" onclick="showGroupContent('group-description-2')"><i class="fas fa-arrow-circle-down"></i></a>
             <p>Group 2</p>
             <a class="add-mentor-to-group" href="#7"><i class="fas fa-plus-circle"></i></a>
-            <div class="group-description">
-                    <ul class="mentors-from-group">
-                        <li>
-                            <p class="mentor-description">Kaziu Moskwa</p>>
-                        </li>
-                        <li>
-                            <p class="mentor-description">Bart Simpson</p>>      
-                        </li>
-                        <li>
-                            <p class="mentor-description">Jerzy Engel</p>>     
-                        </li>
-                    </ul>
-            </div>
+            
         </li>
+        <div class="group-description">
+                <ul id="group-description-2" class="mentors-from-group">
+                    <li>
+                        <p class="mentor-description">Kaziu Moskwa</p>
+                    </li>
+                    <li>
+                        <p class="mentor-description">Bart Simpson</p>      
+                    </li>
+                    <li>
+                        <p class="mentor-description">Jerzy Engel</p>    
+                    </li>
+                </ul>
+        </div>
         <li class="group">
-            <a href="#6"><i class="fas fa-arrow-circle-down"></i></a>
+            <a href="#6" onclick="showGroupContent('group-description-3')"><i class="fas fa-arrow-circle-down"></i></a>
             <p>Group 3</p>
             <a class="add-mentor-to-group" href="#8"><i class="fas fa-plus-circle"></i></a>
-            <div class="group-description">
-                <ul class="mentors-from-group"class="mentors-from-group">
+        </li>
+        <div class="group-description">
+                <ul id="group-description-3" class="mentors-from-group"class="mentors-from-group">
                         <li>
-                            <p class="mentor-description">John Terry</p>>    
+                            <p class="mentor-description">John Terry</p>    
                         </li>
                 </ul>
-            </div>
-        </li>
+        </div>
    </ul>
     
 <div/>
