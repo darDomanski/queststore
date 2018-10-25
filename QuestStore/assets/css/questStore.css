@@ -1,5 +1,22 @@
 /*groups*/
+html{
+  height: 100%;
+  width: 100%;
+}
+body{
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0 auto;
+}
+.colorBlack{
+  background: black !important;
+}
 .group-title{
+  display:block;
+}
+.group-title ul{
+  list-style-type: none;
   background: blue;
   border-radius: 10px;
   margin: 10px 10%;
@@ -7,21 +24,26 @@
   display: flex;
   padding: 0;
 }
-.group-title li {
-  display:inline;
+
+.group-title ul li {
   align-self:center;
   flex-grow: 1;
 }
 
-.group-title li .group-title-left-arrow{
+.arrow-down {
+  display:none;
+}
+
+.group-title ul li .group-title-left-arrow{
   float:left;
   margin-left:10%;
 }
 
-.group-title li .group-title-right-arrow{
+.group-title ul li .group-title-right-arrow{
   float:right;
   margin-right:10%;
 }
+
 /*cards*/
 .card img {
   width: 100%;
@@ -61,7 +83,23 @@
   border-radius: 25px;
   position: relative;
 }
+.hide{
+  overflow: hidden;
+  transition: height 2s;
+  -moz-transition: height 2s;
+  -webkit-transition: height 2s;
+  -o-transition: height 2s; 
+  height: 0px;
+}
 
+.show{
+  overflow: hidden;
+  transition: height 2s;
+  -moz-transition: height 2s;
+  -webkit-transition: height 2s;
+  -o-transition: height 2s; 
+  height: 100vh;
+}
 /*navbar*/
 #cssmenu,
 #cssmenu ul,
