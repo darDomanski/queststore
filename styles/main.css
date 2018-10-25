@@ -62,9 +62,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-
 /*
-========================================
 2 Clearfix
 ========================================
 */
@@ -295,4 +293,3 @@ a.unactive:hover,:active  {
   margin-top: 33px;
   border-top: 1px solid #4a4a4a;
 }
-
