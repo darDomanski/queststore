@@ -13,11 +13,11 @@
 	<div id="header-navbar">
 		<div id='cssmenu'>
 			<div id="bg-one"></div><div id="bg-two"></div><div id="bg-three"></div><div id="bg-four"></div>
-			<ul>
-			   <li class='active'><a href='#'><span>Artefacts</span></a></li>
-			   <li><a href='#'><span>Quests</span></a></li>
-			   <li class='last'><a href='#'><span>Inventory</span></a></li>
-			   <li><a href='#'><span>QUEST STORE</span></a></li>
+			<ul id="bar">
+			   <li class='active tab'><a href='#'><span>Artefacts</span></a></li>
+			   <li class='tab'><a href='quests.html'><span>Quests</span></a></li>
+			   <li class='last tab'><a href='inventory.html'><span>Inventory</span></a></li>
+			   <li id="shop-name"><a href='questStore.html'><span>QUEST STORE</span></a></li>
 			</ul>
 		</div>
 	</div>
@@ -33,7 +33,7 @@
 					<li class="arrow-up"><i class="fas fa-angle-double-up group-title-right-arrow"></i></li>
 				</ul>
 			</div>
-			<div class="cards show" class="row text-center">
+			<div class="cards hide" class="row text-center">
 				<div class="card">
 		            <div class="thumbnail">
 		            	<div class="caption"><h3>Syberyjczak</h3></div>
@@ -96,7 +96,7 @@
 					<li class="arrow-up"><i class="fas fa-angle-double-up group-title-right-arrow"></i></li>
 				</ul>
 			</div>
-			<div class="cards" class="row text-center">
+			<div class="cards hide" class="row text-center">
 				<div class="card">
 		            <div class="thumbnail">
 		            	<div class="caption"><h3>Syberyjczak</h3></div>
@@ -120,7 +120,6 @@
 			</div>
 		</div>
 	</div>
-	<div class="footer"><p>© 2018 Mateusz Mazurczak</p></div>
 <script type="text/javascript" src="assets/js/questStore.js"></script>
 </body>
 </html>
