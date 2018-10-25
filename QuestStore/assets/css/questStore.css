@@ -1,0 +1,289 @@
+/*groups*/
+html{
+  height: 100%;
+  width: 100%;
+  min-height:100%;
+}
+body{
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0 auto;
+}
+.colorBlack{
+  background: black !important;
+}
+.group-title{
+  display:block;
+}
+.group-title ul{
+  list-style-type: none;
+  background: blue;
+  border-radius: 10px;
+  margin: 10px 10%;
+  text-align: center;
+  display: flex;
+  padding: 0;
+}
+
+.group-title ul li {
+  align-self:center;
+  flex-grow: 1;
+}
+
+.arrow-up {
+  display:none;
+}
+
+.group-title ul li .group-title-left-arrow{
+  float:left;
+  margin-left:10%;
+}
+
+.group-title ul li .group-title-right-arrow{
+  float:right;
+  margin-right:10%;
+}
+
+/*cards*/
+.card img {
+  width: 100%;
+}
+
+.card {
+  padding: 3%;
+  width: 25%;
+}
+
+.coin{
+  position: absolute;
+  display: inline-block;
+  right: 20px;
+  background: white;
+  border-radius: 100%;
+  padding: 5px;
+}
+.card .caption {
+  padding: 9px;
+  text-align:center;
+}
+
+.cards {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 10%;
+}
+
+.thumbnail {
+	width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  position: relative;
+}
+.hide{
+  overflow: hidden;
+  transition: height 2s;
+  -moz-transition: height 2s;
+  -webkit-transition: height 2s;
+  -o-transition: height 2s; 
+  height: 0px;
+}
+
+.show{
+  overflow: hidden;
+  transition: height 2s;
+  -moz-transition: height 2s;
+  -webkit-transition: height 2s;
+  -o-transition: height 2s; 
+  height: 500px;
+}
+/*navbar*/
+#header-navbar{
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  top: 0;
+
+}
+#container{
+  margin-top:100px;
+}
+#cssmenu,
+#cssmenu ul,
+#cssmenu ul li,
+#cssmenu ul li a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  font-family: Capriola, Helvetica, sans-serif;
+}
+
+#bar {
+  display: inline-flex;
+  width: 100%;
+}
+
+.tab {
+  flex-grow: 0;
+}
+
+#shop-name {
+  z-index: 4;
+  flex-basis:33%;
+  flex-grow:1;
+}
+
+#shop-name p {
+  text-align:center;
+}
+
+#cssmenu {
+  display:flex;
+  width: auto;
+  height: 59px;
+  padding-bottom: 4px;
+  background: #222222;
+  background: -moz-linear-gradient(top, #555555 0%, #222222 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #555555), color-stop(100%, #222222));
+  background: -webkit-linear-gradient(top, #555555 0%, #222222 100%);
+  background: -o-linear-gradient(top, #555555 0%, #222222 100%);
+  background: -ms-linear-gradient(top, #555555 0%, #222222 100%);
+  background: linear-gradient(to bottom, #555555 0%, #222222 100%);
+}
+#cssmenu.align-right {
+  float: right;
+}
+#cssmenu.align-right ul li {
+  float: right;
+  margin-right: 0;
+  margin-left: 4px;
+}
+#cssmenu.align-right ul li:first-child,
+#cssmenu.align-right ul li:first-child > a {
+  border-bottom-right-radius: 3px;
+}
+#header-navbar #bg-one,
+#header-navbar #bg-two,
+#header-navbar #bg-three,
+#header-navbar #bg-four {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+#header-navbar #bg-one {
+  height: 5px;
+  background: #0f71ba;
+  z-index: 5;
+}
+#header-navbar #bg-two {
+  height: 59px;
+  z-index: 2;
+  background: url('images/bg.png');
+}
+#header-navbar #bg-three {
+  bottom: 4px;
+  height: 55px;
+  z-index: 3;
+  background: #222222;
+  background: -moz-linear-gradient(top, #555555 0%, #222222 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #555555), color-stop(100%, #222222));
+  background: -webkit-linear-gradient(top, #555555 0%, #222222 100%);
+  background: -o-linear-gradient(top, #555555 0%, #222222 100%);
+  background: -ms-linear-gradient(top, #555555 0%, #222222 100%);
+  background: linear-gradient(to bottom, #555555 0%, #222222 100%);
+}
+#header-navbar #bg-four {
+  bottom: 4px;
+  height: 55px;
+  z-index: 4;
+  background: url('images/bg.png');
+}
+#cssmenu ul {
+  height: 59px;
+}
+#cssmenu ul li {
+  float: left;
+  margin-right: 4px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  z-index: 5;
+}
+#cssmenu ul li a {
+  padding: 24px 30px 20px 30px;
+  margin-bottom: 4px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  color: #eeeeee;
+  font-size: 15px;
+  text-decoration: none;
+}
+#cssmenu ul li:first-child,
+#cssmenu ul li:first-child > a {
+  border-bottom-left-radius: 3px;
+}
+#cssmenu ul li:hover,
+#cssmenu ul li.active {
+  background: #0f71ba;
+  background: -moz-linear-gradient(top, #3fa4f0 0%, #0f71ba 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3fa4f0), color-stop(100%, #0f71ba));
+  background: -webkit-linear-gradient(top, #3fa4f0 0%, #0f71ba 100%);
+  background: -o-linear-gradient(top, #3fa4f0 0%, #0f71ba 100%);
+  background: -ms-linear-gradient(top, #3fa4f0 0%, #0f71ba 100%);
+  background: linear-gradient(to bottom, #3fa4f0 0%, #0f71ba 100%);
+}
+#cssmenu ul li a:hover,
+#cssmenu ul li.active > a {
+  background: url('images/bg.png');
+  color: #ffffff;
+}
+
+/* footer */
+.footer{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  height:60px;   /* Height of the footer */
+  background:#6cf;
+}
+
+#my-progress{
+  z-index:4;
+  flex-basis:31%;
+  flex-grow:1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap-reverse;
+}
+
+#my-bar-frame {
+    width: 40%;
+    background-color: grey;
+}
+
+#my-bar {
+    width: 40%;
+    height: 30px;
+    background-color: green;
+}
+
+#menu-options{
+  flex-basis:33%;
+}
+
+#profile-pic {
+  margin-right: 30px;
+  margin-left: 10px;
+  margin-top: 15px;
+  height: 50%;
+  border-radius: 100%;
+  z-index: 4;
+  flex-basis: 1%;
+  border: 1px solid green;
+}
