@@ -3,6 +3,7 @@ html{
   height: 100%;
   width: 100%;
   min-height:100%;
+  background: lightblue url("../../imgs/trees.png");
 }
 body{
   width: 100%;
@@ -24,6 +25,7 @@ body{
   text-align: center;
   display: flex;
   padding: 0;
+  background:  #7FDBFF;
 }
 
 .group-title ul li {
@@ -52,7 +54,8 @@ body{
 
 .card {
   padding: 3%;
-  width: 25%;
+  width: 350px;
+  height: 400px;
 }
 
 .coin{
@@ -76,7 +79,7 @@ body{
 
 .thumbnail {
 	width: 100%;
-  border: 1px solid #ddd;
+  /*border: 1px solid #ddd;*/
   border-radius: 25px;
   position: relative;
 }
@@ -138,7 +141,15 @@ body{
 }
 
 #shop-name p {
-  text-align:center;
+  text-align: center;
+  color: #F5F5F5;
+  font-size: 25px;
+  letter-spacing: 3px;
+  word-spacing: 6px;
+  margin: 0;
+  padding: 0;
+  padding-top: 15px;
+  text-shadow: 1px 1px #DCDCDC;
 }
 
 #cssmenu {
@@ -287,3 +298,100 @@ body{
   flex-basis: 1%;
   border: 1px solid green;
 }
+
+
+/*card-test*/
+.thumbnail {
+  background: no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, .5);
+  text-align: center;
+}
+
+.caption {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+.caption h3 {
+  margin-bottom: 0;
+  text-shadow: 3px 0 0 black;
+}
+
+.coin {
+  position: absolute;
+  display: inline-block;
+  right: 20px;
+  border-radius: 15%;
+  padding: 5px;
+  background-color: lightgoldenrodyellow;
+  font-weight: bold;
+  font-size: large;
+  border: 1px solid black;
+  -webkit-box-shadow: 0px 0px 133px 6px rgba(252,193,45,1);
+  -moz-box-shadow: 0px 0px 133px 6px rgba(252,193,45,1);
+  box-shadow: 0px 0px 13px 4px rgba(252,193,45,1);
+
+}
+
+hr{
+  width: 50px;
+  height: 3px;
+  margin: 20px auto;
+  border: 0;
+  background: #D0BB57;
+}
+.description {
+  margin: 0 auto;
+  padding: 0 50px;
+  color: #FFFFFF;
+  font-family: 'Droid Serif', serif;
+  font-size: 20px;
+  line-height: 24px;
+  opacity: 0;
+  transition: bottom .3s, opacity .3s cubic-bezier(.33,.66,.66,1);
+  text-shadow: 1px 1px 1px black;
+  z-index:6;
+  position:relative;
+}
+.description h6{
+  padding-top: 30%;
+}
+
+.category-name {
+  font-family: 'Droid Serif', serif;
+  font-size: 16px;
+  text-shadow: 2px 2px 2px #FFFFFF;
+}
+
+.blur {
+  background: rgba(84,104,110,0.4);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 4;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  transition: background .3s cubic-bezier(.33,.66,.66,1);
+}
+
+.blur2{
+    background-image: -webkit-linear-gradient(rgba(0,0,0,0.00) 0%, rgba(0,0,0,.4) 21%);
+    background-image: -moz-linear-gradient(rgba(0,0,0,0.00) 0%, rgba(0,0,0,.4) 21%);
+    background-image: -o-linear-gradient(rgba(0,0,0,0.00) 0%, rgba(0,0,0,.4) 21%);
+    background-image: linear-gradient(rgba(0,0,0,0.00) 0%, rgba(0,0,0,.4) 21%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    z-index: 5;
+  }

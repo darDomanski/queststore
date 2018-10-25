@@ -1,6 +1,6 @@
 function dzialam(){
 	if(this.nextElementSibling.classList.contains('hide')){
-		var size = ((this.nextElementSibling.getElementsByClassName("thumbnail").length/3 + 1) * this.nextElementSibling.getElementsByClassName("thumbnail")[0].clientHeight)-100  + "px";
+		var size = ((Math.ceil(this.nextElementSibling.getElementsByClassName("thumbnail").length/3)+1) * document.getElementsByClassName("thumbnail")[0].clientHeight)  + "px";
 		this.nextElementSibling.classList.add('show');
 		this.nextElementSibling.classList.remove('hide');
 		this.nextElementSibling.setAttribute("style","height:"+size);
@@ -20,21 +20,38 @@ function dzialam(){
 	}
 }
 
-function move() {
-    var elem = document.getElementById("myBar");
-    var width = 1;
-    var id = setInterval(frame, 10);
-    function frame() {
-        if (width >= 100) {
-            clearInterval(id);
-        } else {
-            width++;
-            elem.style.width = width + '%';
-        }
-    }
-} 
+// function move() {
+//     var elem = document.getElementById("myBar");
+//     var width = 1;
+//     var id = setInterval(frame, 10);
+//     function frame() {
+//         if (width >= 100) {
+//             clearInterval(id);
+//         } else {
+//             width++;
+//             elem.style.width = width + '%';
+//         }
+//     }
+// } 
+
+function show(){
+	this.getElementsByClassName("blur")[0].style.opacity = "1";
+	this.getElementsByClassName("blur2")[0].style.opacity = "1";
+	this.getElementsByClassName("description")[0].style.opacity = "1";
+}
+
+function hide(){
+	this.getElementsByClassName("blur")[0].style.opacity = "0";
+	this.getElementsByClassName("blur2")[0].style.opacity = "0";
+	this.getElementsByClassName("description")[0].style.opacity = "0";
+}
 
 window.onload = function(){
+	for(var i=0; i< document.querySelectorAll('.thumbnail').length; i++){
+		document.querySelectorAll('.thumbnail')[i].addEventListener("mouseover", show);
+		document.querySelectorAll('.thumbnail')[i].addEventListener("mouseout", hide);		
+	}
+
 	for(var i = 0; i < document.getElementsByClassName("group-title").length; i++){
 		document.getElementsByClassName("group-title")[i].addEventListener("click", dzialam);	
 	}
