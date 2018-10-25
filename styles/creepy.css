@@ -371,6 +371,8 @@ i.fas.fa-plus-circle a{
   cursor: pointer;
   position: relative;
   top: 25px;
+
+
   
 
 }
@@ -394,10 +396,6 @@ i.fas.fa-plus-circle {
   
 }
 
-ul.mentors-from-group {
-  display: none;
-  flex-direction: column;
-}
 
 li.group p {
   padding-top: 10px;
@@ -410,6 +408,19 @@ li.group p {
   margin-right: 30px;
 }
 
+
+ul.mentors-from-group {
+  display: none;
+  flex-direction: column;
+  color: aliceblue;
+  
+  
+}
+
+.mentor-description {
+  text-align: center;
+  padding: 10px;
+}
 
 
 
