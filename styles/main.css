@@ -162,7 +162,7 @@ label input{
 
 /*
 ==================================
-5 Table
+5 Table in mentor
 ==================================
 */
 .your-group {
@@ -178,7 +178,6 @@ table {
   color: #4a4a4a;
   font: 14px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-
 th, td {
   padding: 10px 15px;
   vertical-align: middle;
@@ -189,13 +188,20 @@ thead {
   font-size: 11px;
   text-transform: uppercase;
 }
-
 tbody tr:nth-child(even) {
   background: #f0f0f2;
 }
-
 tbody tr {
   border-bottom: 1px solid #cecfd5;
+}
+a.button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+
+  text-decoration: none;
+  color: initial;
+  width: 33%;
 }
 /*
 ==================================
