@@ -2,18 +2,15 @@
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 1  Reset      
-2  Typography 
-3  Grid
-4  Clearfix
-5  Primary Header
-6  Navigation
-7  Home
-8  
-9  Primary Footer
-10 Links
-11 Contact us
-12 Buttons
-13 About
+2  Clearfix
+3  Login page 
+4  new form
+5  Table
+6  Mentor/Student profile bar
+7  Nav bar in Mentor
+8  inventory in student profile
+9  
+
 
 ==================================
 1.0 Reset
@@ -68,7 +65,7 @@ table {
 
 /*
 ========================================
-4 Clearfix
+2 Clearfix
 ========================================
 */
 .group:before,
@@ -86,23 +83,22 @@ table {
 
 /*
 ==================================
-2 Login page
+3 Login page 
 ==================================
+Label input in new form are afecting input display
+in this page
 */
 
 .login-page {
   display: flex;
   flex-flow: column;
-  
 }
-
 .login-page h2 {
   font: 600 40px/33px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: auto;
   margin-top: 155px;
   padding-bottom: 33px;
 }
-
 .login {
   display: flex;
   flex-flow: column;
@@ -112,14 +108,12 @@ table {
   width: 20%;
   height: 30%;
 }
-
 .login label {
   font: 400 16px/18px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   padding-top: 15px;
   margin: auto;
   margin-left: 12px;
 }
-
 .login input {
   display: block;
   border-radius: 5px;
@@ -127,23 +121,57 @@ table {
   margin-top: 12px;
   width: 80%;
   padding: 5px 8px;
-  
+}
+/*
+==================================
+4 new form
+==================================
+*/
+
+.add-new {
+  display: flex;
+  flex-flow: column;
+}
+
+.add-new h2 {
+  margin: auto;
+  font: 600 40px/33px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.add-new-form {
+  display: flex;
+  flex-flow: column;
+  width: 30%;
+  margin: auto;
+}
+.name-surname {
+  display: flex;
+  flex-flow: column;
+}
+label input{
+  display: flex;
+  border-radius: 5px;
+  width: 50%;
+  margin: 5px 10px 10px 10px;
+}
+.add-member-button {
+  margin-top: 3%;
 }
 
 /*
 ==================================
-4 Table
+5 Table
 ==================================
 */
 .your-group {
   display: flex;
   justify-content: center;
 }
-
 table caption {
   font: 24px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -155,7 +183,6 @@ th, td {
   padding: 10px 15px;
   vertical-align: middle;
 }
-
 thead {
   background: #cecbcb;
   background: linear-gradient(#ebe8e8, #cecbcb);
@@ -172,7 +199,7 @@ tbody tr {
 }
 /*
 ==================================
-4 Mentor/Student profile bar
+6 Mentor/Student profile bar
 ==================================
 */
 .grid {
@@ -184,7 +211,6 @@ tbody tr {
   height: 120;
   margin-left: 30px;
 }
-
 .data h2 {
   margin: 30px 0 0 66px;
   font: 400 30px/32px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -198,7 +224,7 @@ tbody tr {
 
 /*
 ==================================
-4 Nav bar in Mentor
+7 Nav bar in Mentor
 ==================================
 */
 
@@ -217,14 +243,10 @@ div#creepymenu li {
     list-style-type: none;
     font-size: 12px;  
     width: max-content;
-
   }
-
-
 div#creepymenu {
   height: 10%;
 }
-
 a#active {
   text-decoration: none; 
   color: brown;
@@ -244,7 +266,7 @@ a.unactive:hover,:active  {
 
 /*
 ==================================
-5 inventory in student profile
+8 inventory in student profile
 ==================================
 */
 .coolcoins {
@@ -252,7 +274,6 @@ a.unactive:hover,:active  {
   margin-top: 33px;
   border-top: 1px solid #4a4a4a;
 }
-
 .artifacts {
   display: flex;
   margin-top: 33px;
@@ -263,7 +284,6 @@ a.unactive:hover,:active  {
 .quests table {
   margin-left: 45%;
 }
-
 .quests {
   display: flex;
   margin-top: 33px;
