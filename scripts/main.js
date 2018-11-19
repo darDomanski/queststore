@@ -10,7 +10,6 @@ function showGroupContent(idOfGroup) {
         document.getElementById(idOfGroup).style.display="none";
     }
     else if (res == "none") {
-        document.getElementById(idOfGroup).style.display="flex";
     }
     
     
