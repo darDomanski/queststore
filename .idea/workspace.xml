@@ -2,35 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15387184-a0b1-4588-a304-1d674d624d47" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/Controller/MentorController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/Controller/StudentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/Controller/BasicMentorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/Controller/BasicStudentController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/Controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/Controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/DAO/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/DAO/DAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/Controller/MentorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/Controller/MentorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/Controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/Controller/StudentController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/DAO/LoginDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/DAO/LoginDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/DAO/LoginDAOpostgress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/DAO/LoginDAOpostgress.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/DAO/MentorDAOpostgress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/DAO/MentorDAOpostgress.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/DAO/StudentDAOpostgress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/DAO/StudentDAOpostgress.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/Controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/Controller/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/DAO/ArtifactsGroupsDAOpostgress.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/DAO/ArtifactsGroupsDAOpostgress.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/DAO/ArtifactsSingleDAOpostgress.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/DAO/ArtifactsSingleDAOpostgress.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/DAO/DAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/DAO/DAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/DAO/LoginDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/DAO/LoginDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/DAO/LoginDAOpostgress.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/DAO/LoginDAOpostgress.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/DAO/MentorDAOpostgress.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/DAO/MentorDAOpostgress.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/DAO/QuestDAOpostgress.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/DAO/QuestDAOpostgress.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/DAO/StudentDAOpostgress.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/DAO/StudentDAOpostgress.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/Model/ArtifactGroups.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/Model/ArtifactGroups.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/Model/ArtifactSingle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/Model/ArtifactSingle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/Model/Creepy.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/Model/Creepy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/Model/Mentor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/Model/Mentor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/Model/Quest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/Model/Quest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/Model/StoreItems.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/Model/StoreItems.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/Model/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/Model/Student.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/Model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/Model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/View/Viewer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/View/Viewer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/DAO/MentorDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/DAO/MentorDAO.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,27 +30,27 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="57" />
+          <entry key="java" value="74" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="57" />
+          <entry key="JAVA" value="74" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="8" />
-          <entry key="java" value="4081" />
+          <entry key="dummy" value="23" />
+          <entry key="java" value="4135" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="4081" />
-          <entry key="PLAIN_TEXT" value="8" />
+          <entry key="JAVA" value="4135" />
+          <entry key="PLAIN_TEXT" value="23" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
@@ -80,104 +59,82 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/DAO/StudentDAOpostgress.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/View/Viewer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/Controller/MainController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="47" lean-forward="true" selection-start-column="47" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/DAO/LoginDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/DAO/LoginDAOpostgress.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="975">
-              <caret line="65" selection-start-line="65" selection-end-line="65" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#645#659#0" expanded="true" />
-                <element signature="e#780#788#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/Model/Student.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="54" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/Model/Mentor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="93" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="93" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/Model/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="36" column="57" selection-start-line="36" selection-start-column="57" selection-end-line="36" selection-end-column="57" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/DAO/MentorDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+            <state relative-caret-position="195">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/DAO/MentorDAOpostgress.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/Controller/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#678#684#0" expanded="true" />
-                <element signature="e#651#659#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="120">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/DAO/DAO.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/Controller/BasicMentorController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="930">
-              <caret line="62" column="5" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
+            <state relative-caret-position="30">
+              <caret line="2" column="62" selection-start-line="2" selection-start-column="62" selection-end-line="2" selection-end-column="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/Controller/BasicStudentController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="64" selection-start-line="2" selection-start-column="64" selection-end-line="2" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/Controller/MentorController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/Controller/StudentController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/App.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="39" lean-forward="true" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/DAO/ArtifactsGroupsDAOpostgress.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="82" selection-start-line="2" selection-start-column="82" selection-end-line="2" selection-end-column="82" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/DAO/ArtifactsGroupsDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -187,8 +144,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -211,14 +168,18 @@
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/Model/Creepy.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/Model/StoreItems.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/Model/ArtifactGroups.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/Controller/MainController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/Controller/StudentController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/DAO/LoginDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/DAO/DAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/DAO/LoginDAOpostgress.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/DAO/StudentDAOpostgress.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/DAO/MentorDAOpostgress.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/DAO/LoginDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/DAO/MentorDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/Controller/BasicMentorController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/Controller/BasicStudentController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/Controller/BasicMainController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/Controller/MainController.java" />
       </list>
     </option>
   </component>
@@ -283,33 +244,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="queststore" type="462c0819:PsiDirectoryNode" />
               <item name="Controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="queststore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="queststore" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="queststore" type="462c0819:PsiDirectoryNode" />
-              <item name="DAO" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="queststore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="queststore" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="queststore" type="462c0819:PsiDirectoryNode" />
-              <item name="Model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="queststore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="queststore" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="queststore" type="462c0819:PsiDirectoryNode" />
-              <item name="View" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -438,55 +372,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/DAO/ArtifactsGroupsDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/DAO/ArtifactsSingleDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/DAO/StudentDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/DAO/QuestDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/DAO/ArtifactsGroupsDAOpostgress.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="82" selection-start-line="2" selection-start-column="82" selection-end-line="2" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/DAO/ArtifactsSingleDAOpostgress.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="82" selection-start-line="2" selection-start-column="82" selection-end-line="2" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/DAO/QuestDAOpostgress.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="62" selection-start-line="2" selection-start-column="62" selection-end-line="2" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/Model/Creepy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -515,34 +400,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/Controller/MentorController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/Controller/StudentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/View/Viewer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/Model/ArtifactGroups.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -554,13 +411,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/DAO/MentorDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/Model/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
@@ -568,24 +418,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/DAO/LoginDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/Model/Student.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="345">
+          <caret line="23" column="54" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/Controller/MainController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/Model/Mentor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="47" lean-forward="true" selection-start-column="47" selection-end-column="47" />
+        <state relative-caret-position="90">
+          <caret line="6" column="93" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/DAO/QuestDAOpostgress.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="62" selection-start-line="2" selection-start-column="62" selection-end-line="2" selection-end-column="62" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/DAO/LoginDAOpostgress.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="975">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
+        <state relative-caret-position="227">
+          <caret line="17" column="56" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#645#659#0" expanded="true" />
@@ -594,17 +451,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/DAO/DAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/DAO/LoginDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="930">
-          <caret line="62" column="5" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
+        <state relative-caret-position="150">
+          <caret line="10" column="57" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/Model/Student.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/DAO/MentorDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="54" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
+        <state relative-caret-position="120">
+          <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/DAO/StudentDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -618,22 +485,113 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/Model/Mentor.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/DAO/QuestDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="93" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="93" />
+        <state relative-caret-position="30">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/DAO/MentorDAOpostgress.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+        <state relative-caret-position="245">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#678#684#0" expanded="true" />
             <element signature="e#651#659#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/DAO/DAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="930">
+          <caret line="62" column="5" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/DAO/ArtifactsSingleDAOpostgress.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="82" selection-start-line="2" selection-start-column="82" selection-end-line="2" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/DAO/ArtifactsSingleDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/DAO/ArtifactsGroupsDAOpostgress.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="82" selection-start-line="2" selection-start-column="82" selection-end-line="2" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/DAO/ArtifactsGroupsDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/View/Viewer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="39" lean-forward="true" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/Controller/StudentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/Controller/MentorController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/Controller/BasicMentorController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="62" selection-start-line="2" selection-start-column="62" selection-end-line="2" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/Controller/BasicStudentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="64" selection-start-line="2" selection-start-column="64" selection-end-line="2" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/Controller/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="33" lean-forward="true" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/Controller/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>

@@ -1,4 +1,4 @@
 package com.codecool.MKM.queststore.Controller;
 
-public class MentorController {
+public interface MentorController {
 }
