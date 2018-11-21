@@ -54,42 +54,6 @@ public class MentorDAOpostgress extends DAO implements MentorDAO {
         return mentorsList;
     }
 
-    public void addStudentToDataBase(Student student) {
-
-        String query = "INSERT INTO students VALUES(DEFAULT,'" + student.getFirstName() +
-        "','" + student.getNickname() +"',"+ student.getPhone() +"','"+ student.getEmail() +
-                "',"  + student.getQuests() + "," +
-                student.getArtifacts() + "," + student.getGroupArtifacts() + ",'" +
-                student.getGroup() + "'," + student.getWallet() + "," +
-                student.getExperience() + ");";
-
-        Connection connection = this.openDataBase();
-        Statement statement = getStatement(connection);
-
-        editDataBase(query, connection, statement);
-    }
-
-
-    public void addStudentToGroup(int studentId, String newGroup) {
-        String query = "Update students SET classroom='" + newGroup +"' WHERE id=" + String.valueOf(studentId) + ";";
-
-        Connection connection = this.openDataBase();
-        Statement statement = getStatement(connection);
-
-        editDataBase(query, connection, statement);
-    }
-
-
-    public void addNewQuest(Quest questToAdd) {
-        String query = "INSERT INTO quests VALUES(DEFAULT,'" + questToAdd.getName() + "'," +
-                questToAdd.getCategory() + "'," + questToAdd.getPrice() + ");";
-
-        Connection connection = this.openDataBase();
-        Statement statement = getStatement(connection);
-
-        editDataBase(query, connection, statement);
-    }
-
 
     public void addMentorToDataBase(Mentor mentor) {
         String query = "INSERT INTO students VALUES(DEFAULT,'" + mentor.getFirstName() +
@@ -129,10 +93,6 @@ public class MentorDAOpostgress extends DAO implements MentorDAO {
         Statement statement = getStatement(connection);
 
         editDataBase(query, connection, statement);
-
-
     }
-
-
 
 }

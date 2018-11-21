@@ -1,5 +1,6 @@
 package com.codecool.MKM.queststore.DAO;
 
+import com.codecool.MKM.queststore.Model.Mentor;
 import com.codecool.MKM.queststore.Model.Student;
 import com.codecool.MKM.queststore.Model.User;
 
@@ -9,5 +10,11 @@ public interface MentorDAO {
 
     public List<User> getAllMentors();
 
-    public void addStudentToDataBase(Student student);
+    public void addMentorToDataBase(Mentor mentor);
+
+    public void addMentorToGroup(String newGroup, int mentorId);
+
+    public List<User> getMentorById(int id);
+
+    public void editMentor(int mentorId, String[] newProperties );
 }
