@@ -46,7 +46,25 @@ function hide(){
 	this.getElementsByClassName("description")[0].style.opacity = "0";
 }
 
+function changeToInput(){
+	var	thumbnail = this.parentNode;
+	var coin = thumbnail.getElementsByClassName("coin")[0];
+	coin.style.display = "none";
+	var input = document.createElement("input");
+	input.type = "text";
+	input.value = "100";
+	alert(thumbnail);
+	alert(thumbnail.getElementsByClassName("caption")[0]);
+	alert(input);
+	thumbnail.insertBefore(input, thumbnail);
+
+	input.focus();
+}
+
 window.onload = function(){
+	for(var i=0; i<document.querySelectorAll('.new-element').length; i++){
+		document.querySelectorAll('.new-element')[i].addEventListener("click", changeToInput)
+	}
 	for(var i=0; i< document.querySelectorAll('.thumbnail').length; i++){
 		document.querySelectorAll('.thumbnail')[i].addEventListener("mouseover", show);
 		document.querySelectorAll('.thumbnail')[i].addEventListener("mouseout", hide);		
