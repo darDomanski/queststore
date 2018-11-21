@@ -58,6 +58,15 @@ public class StudentDAOpostgress extends DAO implements StudentDAO {
         editDataBase(query, connection, statement);
     }
 
+    public void buyArtifactsWithOtherStudents(int studentId, int[] bougthGroupArtifacts) {
+        String query = "Update students SET classroom_artifacts=" + bougthGroupArtifacts + " where id=" + studentId + ";";
+
+        Connection connection = this.openDataBase();
+        Statement statement = getStatement(connection);
+
+        editDataBase(query, connection, statement);
+    }
+
 
     public List<User> getStudentById(int studentId) {
         String query = "SELECT * FROM students WHERE id=" + studentId + ";";

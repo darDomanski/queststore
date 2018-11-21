@@ -18,4 +18,6 @@ public interface StudentDAO {
     public List<User> getStudentById(int studentId);
 
     public List<User> getAllStudentsSortedByGroup();
+
+    public void buyArtifactsWithOtherStudents(int studentId, int[] bougthGroupArtifacts);
 }
