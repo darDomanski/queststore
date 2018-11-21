@@ -1,6 +1,8 @@
 package com.codecool.MKM.queststore.DAO;
 
 import com.codecool.MKM.queststore.Model.Mentor;
+import com.codecool.MKM.queststore.Model.Quest;
+import com.codecool.MKM.queststore.Model.Student;
 import com.codecool.MKM.queststore.Model.User;
 
 import java.sql.Connection;
@@ -36,12 +38,101 @@ public class MentorDAOpostgress extends DAO implements MentorDAO {
                     recordsPropertiesList.add(result.getString(i));
                 }
 
-                mentorsList.add(new Mentor(recordsPropertiesList.get(0), recordsPropertiesList.get(1),recordsPropertiesList.get(2),recordsPropertiesList.get(3),recordsPropertiesList.get(4)));
+                mentorsList.add(new Mentor(
+                        recordsPropertiesList.get(0),
+                        recordsPropertiesList.get(1),
+                        recordsPropertiesList.get(2),
+                        recordsPropertiesList.get(3),
+                        recordsPropertiesList.get(4)));
             }
         }catch (SQLException e) {
             e.printStackTrace();
+            System.out.println("Data base error - check Your internet connection or try later!");
+
         }
         closeStatementAndConnection(connection,statement);
         return mentorsList;
     }
+
+    public void addStudentToDataBase(Student student) {
+
+        String query = "INSERT INTO students VALUES(DEFAULT,'" + student.getFirstName() +
+        "','" + student.getNickname() +"',"+ student.getPhone() +"','"+ student.getEmail() +
+                "',"  + student.getQuests() + "," +
+                student.getArtifacts() + "," + student.getGroupArtifacts() + ",'" +
+                student.getGroup() + "'," + student.getWallet() + "," +
+                student.getExperience() + ");";
+
+        Connection connection = this.openDataBase();
+        Statement statement = getStatement(connection);
+
+        editDataBase(query, connection, statement);
+    }
+
+
+    public void addStudentToGroup(int studentId, String newGroup) {
+        String query = "Update students SET classroom='" + newGroup +"' WHERE id=" + String.valueOf(studentId) + ";";
+
+        Connection connection = this.openDataBase();
+        Statement statement = getStatement(connection);
+
+        editDataBase(query, connection, statement);
+    }
+
+
+    public void addNewQuest(Quest questToAdd) {
+        String query = "INSERT INTO quests VALUES(DEFAULT,'" + questToAdd.getName() + "'," +
+                questToAdd.getCategory() + "'," + questToAdd.getPrice() + ");";
+
+        Connection connection = this.openDataBase();
+        Statement statement = getStatement(connection);
+
+        editDataBase(query, connection, statement);
+    }
+
+
+    public void addMentorToDataBase(Mentor mentor) {
+        String query = "INSERT INTO students VALUES(DEFAULT,'" + mentor.getFirstName() +
+                "','" + mentor.getNickname() +"','"+ mentor.getPhone() +"','"+ mentor.getEmail() +
+                "',''" + mentor.getGroup() +  "');";
+
+        Connection connection = this.openDataBase();
+        Statement statement = getStatement(connection);
+
+        editDataBase(query, connection, statement);
+    }
+
+
+    public void addMentorToGroup(String newGroup, int mentorId) {
+        String query = "Update mentors SET classroom='" + newGroup +"' WHERE id=" + String.valueOf(mentorId) + ";";
+
+        Connection connection = this.openDataBase();
+        Statement statement = getStatement(connection);
+
+        editDataBase(query, connection, statement);
+    }
+
+
+    public List<User> getMentorById(int id){
+        String query = "select * from mentors where id=" + id + ";";
+        return getMentorsListFromDataBase(query);
+
+    }
+
+    public void editMentor(int mentorId, String[] newProperties ) {
+        String query = "Update mentors SET firstname='" + newProperties[0] +
+                "',nickname='" + newProperties[1] + "',phone='" + newProperties[2] +
+                "',email='" + newProperties[3] + "',classroom='" +
+                newProperties[4] + "' where id=" + mentorId + ";";
+
+        Connection connection = this.openDataBase();
+        Statement statement = getStatement(connection);
+
+        editDataBase(query, connection, statement);
+
+
+    }
+
+
+
 }

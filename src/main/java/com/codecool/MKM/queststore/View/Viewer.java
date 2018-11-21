@@ -13,6 +13,6 @@ public class Viewer {
     final String[] creepyMenu = {"Add new mentor", "Create group", "Add mentor to group", "Edit mentor", "See mentor's profile"};
 
 
-
+    /// create group - new table in DB must be create - rest of creepy functionality in DAO done
 
 }

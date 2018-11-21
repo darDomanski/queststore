@@ -58,8 +58,9 @@ public abstract class DAO {
             statement.executeUpdate(query);
         } catch (SQLException e) {
             e.printStackTrace();
+            System.out.println("Data base error - check Your internet connection or try later!");
         }
-
+        closeStatementAndConnection(connection, statement);
     }
 
 }
