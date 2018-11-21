@@ -3,7 +3,7 @@ html{
   height: 100%;
   width: 100%;
   min-height:100%;
-  background: lightblue url("../../imgs/trees.png");
+  background: lightblue url("../../../images/trees.png");
 }
 body{
   width: 100%;
@@ -79,7 +79,6 @@ body{
 
 .thumbnail {
 	width: 100%;
-  /*border: 1px solid #ddd;*/
   border-radius: 25px;
   position: relative;
 }
@@ -288,7 +287,7 @@ body{
   flex-basis:33%;
 }
 
-#profile-pic {
+#profile-link {
   margin-right: 30px;
   margin-left: 10px;
   margin-top: 15px;
@@ -297,6 +296,11 @@ body{
   z-index: 4;
   flex-basis: 1%;
   border: 1px solid green;
+}
+
+#profile-pic {
+  height: 100%;
+  border-radius: 100%;
 }
 
 
@@ -367,7 +371,8 @@ hr{
 .category-name {
   font-family: 'Droid Serif', serif;
   font-size: 16px;
-  text-shadow: 2px 2px 2px #FFFFFF;
+  text-shadow: 1px 1px 1px black;
+  color: white;
 }
 
 .blur {
@@ -395,3 +400,14 @@ hr{
     left: 0;
     z-index: 5;
   }
+
+.new-element{
+  font-size: 100px;
+  color: #ff3b39;
+  position: relative;
+  z-index: 10;
+}
+
+.new-element .fa-plus{
+  color:#ff3b39;
+}
