@@ -9,5 +9,8 @@
         <module name="queststore" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="queststore" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>
