@@ -4,9 +4,9 @@ import java.util.List;
 
 public interface StudentController {
 
-    List<String> seeVallet(String nickName);
+    List<String> seeVallet(Integer id);
     void buyArtifactSingle();
     void buyArtifactGroup();
-    Integer checkLevelOfExp(String nickName);
+    Integer checkLevelOfExp(Integer id);
 
 }

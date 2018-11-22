@@ -9,7 +9,10 @@ public class Student extends User {
     private int experience;
 
 
-    public Student(int id, String firstName, String nickname, String phone, String email, String group, int[] quests, int[] artifacts,int[] groupArtifacts, int wallet, int experience) {
+    public Student(int id, String firstName, String nickname,
+                   String phone, String email, String group,
+                   int[] quests, int[] artifacts,int[] groupArtifacts,
+                   int wallet, int experience) {
         super(id, firstName, nickname, phone, email, group);
         this.quests = quests;
         this.artifacts = artifacts;
