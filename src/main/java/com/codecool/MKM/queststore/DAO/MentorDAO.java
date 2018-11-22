@@ -17,4 +17,6 @@ public interface MentorDAO {
     public List<User> getMentorById(int id);
 
     public void editMentor(int mentorId, String[] newProperties );
+
+    public List<User> getAllMentorsSortedByGroup();
 }

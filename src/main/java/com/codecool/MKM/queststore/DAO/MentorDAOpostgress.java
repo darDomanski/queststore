@@ -19,6 +19,11 @@ public class MentorDAOpostgress extends DAO implements MentorDAO {
         return getMentorsListFromDataBase(query);
     }
 
+    public List<User> getAllMentorsByGroup() {
+        String query = "select * from mentors order by classroom;";
+        return getMentorsListFromDataBase(query);
+    }
+
 
     private List<User> getMentorsListFromDataBase(String query) {
 
@@ -56,9 +61,9 @@ public class MentorDAOpostgress extends DAO implements MentorDAO {
 
 
     public void addMentorToDataBase(Mentor mentor) {
-        String query = "INSERT INTO students VALUES(DEFAULT,'" + mentor.getFirstName() +
+        String query = "INSERT INTO mentors VALUES(DEFAULT,'" + mentor.getFirstName() +
                 "','" + mentor.getNickname() +"','"+ mentor.getPhone() +"','"+ mentor.getEmail() +
-                "',''" + mentor.getGroup() +  "');";
+                "','" + mentor.getGroup() +  "');";
 
         Connection connection = this.openDataBase();
         Statement statement = getStatement(connection);
