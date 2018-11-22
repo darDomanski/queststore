@@ -22,7 +22,7 @@ public class BasicStoreController implements StoreController {
         System.out.println("i'm in get all quests");
         ArrayList<Quest> questList = quest.getAllQuests();
         for(int i=0; i<questList.size();i++){
-            System.out.println(questList.get(i).getName()ch);
+            System.out.println(questList.get(i).getName());
         }
     }
 
