@@ -5,17 +5,20 @@ public class MainController {
     private MentorController mentorController;
     private StudentController studentController;
     private CreepyController creepyController;
+    private StoreController storeController;
 
     public MainController() {
         mentorController = new BasicMentorController();
         studentController = new BasicStudentController();
         creepyController = new BasicCreepyController();
+        storeController = new BasicStoreController();
         run();
 
     }
 
     public void run() {
-        creepyController.addNewMentor();
+//        creepyController.addNewMentor();
+        storeController.getAllQuests();
     }
 
 
