@@ -11,8 +11,9 @@ import java.util.List;
 
 public class BasicCreepyController implements CreepyController {
 
-    Viewer view;
-    MentorDAO dao;
+    private Viewer view;
+    private MentorDAO dao;
+    private final String[] creepyMenu = {"Add new mentor", "Add mentor to group", "Edit mentor", "See mentor's profile", "Log out"};
 
 
     public BasicCreepyController() {
@@ -111,5 +112,31 @@ public class BasicCreepyController implements CreepyController {
         }
 
         view.printTable(listOfRecords, header);
+    }
+
+    public void runCreepy() {
+
+        boolean creepyRun = true;
+
+        while(creepyRun) {
+            view.printMenu(creepyMenu);
+            int choice = view.getIntegerInputFromUser("Enter option number: ");
+            switch (choice) {
+                case 1:
+                    addNewMentor();
+                    break;
+                case 2:
+                    addMentorToGroup();
+                    break;
+                case 3:
+                    editMentor();
+                    break;
+                case 4:
+                    showMentorProfile();
+                    break;
+                case 5:
+                    creepyRun = false;
+            }
+        }
     }
 }

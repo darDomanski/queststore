@@ -20,4 +20,6 @@ public interface StudentDAO {
     public List<User> getAllStudentsSortedByGroup();
 
     public void buyArtifactsWithOtherStudents(int studentId, int[] bougthGroupArtifacts);
+
+    public List<User> getStudentByNickName(String nickname);
 }

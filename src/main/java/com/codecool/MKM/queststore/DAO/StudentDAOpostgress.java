@@ -88,6 +88,11 @@ public class StudentDAOpostgress extends DAO implements StudentDAO {
         return getStudentsListFromDataBase(query);
     }
 
+    public List<User> getStudentByNickName(String nickname) {
+        String query = "SELECT * FROM students WHERE nickname=" + nickname + ";";
+        return getStudentsListFromDataBase(query);
+    }
+
     public List<User> getAllStudentsSortedByGroup() {
         String query = "SELECT * FROM students ORDER BY classroom;";
 
