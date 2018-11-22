@@ -1,3 +1,5 @@
-.idea
-.settings
+target/*
 pom.xml
+src/test/*
+queststore.iml
+.idea/*
