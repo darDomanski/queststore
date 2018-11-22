@@ -39,9 +39,9 @@ public class MentorDAOpostgress extends DAO implements MentorDAO {
             while (result.next()) {
                 List<String> recordsPropertiesList = new ArrayList<String>();
 
-                int id = result.getInt(0);
+                int id = result.getInt(1);
 
-                for (int i = 1; i<=7; i++) {
+                for (int i = 1; i<=6; i++) {
                     recordsPropertiesList.add(result.getString(i));
                 }
 

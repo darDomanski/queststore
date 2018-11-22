@@ -34,15 +34,33 @@ public class BasicCreepyController implements CreepyController {
 
     public void addMentorToGroup() {
 
+        showAllMentorsSortedByGroup();
+
+        int id = view.getIntegerInputFromUser("Enter id of mentor's which You want add to group: ");
+        String group = view.getStringFromUser("Enter group name to add mentor: ");
+        dao.addMentorToGroup(group, id);
+
+    }
+
+
+    private void showAllMentorsSortedByGroup() {
+
         List<User> listOfMentors = dao.getAllMentorsSortedByGroup();
 
         List<List<String>> listOfRecords = new ArrayList<List<String>>();
 
         for(User mentor : listOfMentors) {
             List<String> propertiesList = new ArrayList<String>();
+            propertiesList.add(String.valueOf(mentor.getId()));
+            propertiesList.add(mentor.getFirstName());
+            propertiesList.add(mentor.getGroup());
+            listOfRecords.add(propertiesList);
+        }
 
-         }
-
-
+        List<String> headerList = new ArrayList<String>();
+        headerList.add("id:");
+        headerList.add("name: ");
+        headerList.add("group:");
+        view.printTable(listOfRecords, headerList);
     }
 }

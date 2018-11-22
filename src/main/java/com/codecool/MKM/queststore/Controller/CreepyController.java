@@ -4,4 +4,6 @@ public interface CreepyController {
 
     public void addNewMentor();
 
+    public void addMentorToGroup();
+
 }
