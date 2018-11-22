@@ -9,7 +9,7 @@ public abstract class DAO {
         try {
             c = DriverManager
                     .getConnection("jdbc:postgresql://localhost:5432/QuestStore",
-                            "Krzysztof", "jebacserwery");
+                            "mihuadmin", "lokas777");
         } catch (Exception e) {
             e.printStackTrace();
             System.err.println(e.getClass().getName()+": "+e.getMessage());
