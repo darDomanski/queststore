@@ -28,7 +28,7 @@ public class BasicCreepyController implements CreepyController {
         String email = view.getStringFromUser("Enter mentor's email: ");
         String group =view.getStringFromUser("Enter mentor's group: ");
 
-        dao.addMentorToDataBase(new Mentor(name, nickname, phone, email, group));
+        dao.addMentorToDataBase(new Mentor(0, name, nickname, phone, email, group));
     }
 
 
@@ -43,6 +43,6 @@ public class BasicCreepyController implements CreepyController {
 
          }
 
-        printTable(List<List<String>> listOfRecords, List<String> header)
+
     }
 }

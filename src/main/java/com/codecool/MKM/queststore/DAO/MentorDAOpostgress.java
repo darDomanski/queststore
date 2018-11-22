@@ -19,7 +19,7 @@ public class MentorDAOpostgress extends DAO implements MentorDAO {
         return getMentorsListFromDataBase(query);
     }
 
-    public List<User> getAllMentorsByGroup() {
+    public List<User> getAllMentorsSortedByGroup() {
         String query = "select * from mentors order by classroom;";
         return getMentorsListFromDataBase(query);
     }
@@ -39,16 +39,18 @@ public class MentorDAOpostgress extends DAO implements MentorDAO {
             while (result.next()) {
                 List<String> recordsPropertiesList = new ArrayList<String>();
 
+                int id = result.getInt(0);
+
                 for (int i = 1; i<=7; i++) {
                     recordsPropertiesList.add(result.getString(i));
                 }
 
-                mentorsList.add(new Mentor(
-                        recordsPropertiesList.get(0),
+                mentorsList.add(new Mentor(id,
                         recordsPropertiesList.get(1),
                         recordsPropertiesList.get(2),
                         recordsPropertiesList.get(3),
-                        recordsPropertiesList.get(4)));
+                        recordsPropertiesList.get(4),
+                        recordsPropertiesList.get(5)));
             }
         }catch (SQLException e) {
             e.printStackTrace();

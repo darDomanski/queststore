@@ -4,7 +4,7 @@ public class Mentor extends User {
 
 
 
-    public Mentor(String firstName, String nickname, String phone, String email, String group) {
-        super(firstName,nickname,phone,email,group);
+    public Mentor(int id, String firstName, String nickname, String phone, String email, String group) {
+        super(id, firstName,nickname,phone,email,group);
     }
 }

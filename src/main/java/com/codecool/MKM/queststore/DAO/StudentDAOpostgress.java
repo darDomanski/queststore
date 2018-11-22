@@ -94,6 +94,8 @@ public class StudentDAOpostgress extends DAO implements StudentDAO {
             while (result.next()) {
                 List<String> recordsPropertiesList = new ArrayList<String>();
 
+                int id = result.getInt(0);
+
                 for (int i = 1; i<=5; i++) {
                     recordsPropertiesList.add(result.getString(i));
                 }
@@ -104,7 +106,7 @@ public class StudentDAOpostgress extends DAO implements StudentDAO {
                 int wallet = result.getInt(9);
                 int experience = result.getInt(10);
 
-                studentsList.add(new Student(
+                studentsList.add(new Student(id,
                         recordsPropertiesList.get(0),
                         recordsPropertiesList.get(1),
                         recordsPropertiesList.get(2),

@@ -2,6 +2,7 @@ package com.codecool.MKM.queststore.Model;
 
 public abstract class User {
 
+    private int id;
     private String firstName;
     private String nickname;
     private String phone;
@@ -13,7 +14,8 @@ public abstract class User {
 
     }
 
-    public User(String firstName, String nickname, String phone, String email, String group) {
+    public User(int id, String firstName, String nickname, String phone, String email, String group) {
+        this.id = id;
         this.firstName = firstName;
         this.nickname = nickname;
         this.phone = phone;
@@ -35,4 +37,7 @@ public abstract class User {
 
     public String getGroup(){return this.group;}
     public void setGroup(String group){this.group=group;}
+
+    public int getId() {return this.id;}
+    public void setId(int id) {this.id = id;}
 }
