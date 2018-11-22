@@ -63,4 +63,19 @@ public class BasicCreepyController implements CreepyController {
         headerList.add("group:");
         view.printTable(listOfRecords, headerList);
     }
+
+    public void editMentor() {
+        showAllMentorsSortedByGroup();
+
+        int id = view.getIntegerInputFromUser("Enter id of mentor's to edit: ");
+        String[] properties = new String[5];
+
+        properties[0] = view.getStringFromUser("Enter a new name for mentor: ");
+        properties[1] = view.getStringFromUser("Enter a new nickname for mentor: ");
+        properties[2] = view.getStringFromUser("Enter a new phone for mentor: ");
+        properties[3] = view.getStringFromUser("Enter a new email for mentor: ");
+        properties[4] = view.getStringFromUser("Enter a new group for mentor: ");
+
+        dao.editMentor(id, properties );
+    }
 }
