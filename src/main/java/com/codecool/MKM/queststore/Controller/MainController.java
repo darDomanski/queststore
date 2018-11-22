@@ -15,7 +15,7 @@ public class MainController {
     }
 
     public void run() {
-        mentorController.createStudent();
+        mentorController.addQuest();
     }
 
 

@@ -1,12 +1,16 @@
 package com.codecool.MKM.queststore.Controller;
 
+import com.codecool.MKM.queststore.DAO.QuestDAO;
+import com.codecool.MKM.queststore.DAO.QuestDAOpostgress;
 import com.codecool.MKM.queststore.DAO.StudentDAO;
 import com.codecool.MKM.queststore.DAO.StudentDAOpostgress;
+import com.codecool.MKM.queststore.Model.Quest;
 import com.codecool.MKM.queststore.Model.Student;
 import com.codecool.MKM.queststore.Model.User;
 import com.codecool.MKM.queststore.View.Viewer;
 import sun.rmi.log.LogInputStream;
 
+import javax.jnlp.IntegrationService;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,10 +18,12 @@ public class BasicMentorController implements MentorController {
 
     Viewer view;
     StudentDAO studentDAO;
+    QuestDAO questDAO;
 
     public BasicMentorController() {
         this.view = new Viewer();
         this.studentDAO = new StudentDAOpostgress();
+        this.questDAO = new QuestDAOpostgress();
     }
 
     public void createStudent() {
@@ -71,4 +77,14 @@ public class BasicMentorController implements MentorController {
 
         view.printTable(listOfRecords, header);
     }
+
+    public void addQuest() {
+
+        String name = view.getStringFromUser("Enter new  quest's name:  ");
+        String category = view.getStringFromUser("Enter quest's category name: ");
+        int price = view.getIntegerInputFromUser("Enter a quest's price: ");
+        questDAO.addNewQuest(new Quest(name, category, price));
+
+    }
+
 }

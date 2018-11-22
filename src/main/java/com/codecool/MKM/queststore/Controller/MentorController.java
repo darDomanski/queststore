@@ -5,4 +5,6 @@ public interface MentorController {
     public void createStudent();
 
     public void addStudentToGroup();
+
+    public void addQuest();
 }

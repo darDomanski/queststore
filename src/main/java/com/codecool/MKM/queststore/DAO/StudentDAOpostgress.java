@@ -26,7 +26,7 @@ public class StudentDAOpostgress extends DAO implements StudentDAO {
                 artifacts + "," + groupArtifacts + ",'" +
                 student.getGroup() + "'," + student.getWallet() + "," +
                 student.getExperience() + ");";
-        System.out.println(query);
+
         Connection connection = this.openDataBase();
         Statement statement = getStatement(connection);
 
