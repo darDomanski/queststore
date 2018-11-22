@@ -16,20 +16,35 @@ public class StudentDAOpostgress extends DAO implements StudentDAO {
 
 
     public void addStudentToDataBase(Student student) {
+        String quests = createStringFromArrayInt(student.getQuests());
+        String artifacts = createStringFromArrayInt(student.getArtifacts());
+        String groupArtifacts = createStringFromArrayInt(student.getGroupArtifacts());
 
         String query = "INSERT INTO students VALUES(DEFAULT,'" + student.getFirstName() +
-                "','" + student.getNickname() +"',"+ student.getPhone() +"','"+ student.getEmail() +
-                "',"  + student.getQuests() + "," +
-                student.getArtifacts() + "," + student.getGroupArtifacts() + ",'" +
+                "','" + student.getNickname() +"','"+ student.getPhone() +"','"+ student.getEmail() +
+                "',"  + quests + "," +
+                artifacts + "," + groupArtifacts + ",'" +
                 student.getGroup() + "'," + student.getWallet() + "," +
                 student.getExperience() + ");";
-
+        System.out.println(query);
         Connection connection = this.openDataBase();
         Statement statement = getStatement(connection);
 
         editDataBase(query, connection, statement);
     }
 
+
+    private String createStringFromArrayInt(int[] array) {
+        StringBuilder sb = new StringBuilder();
+        sb.append("'{");
+        for (int i = 0; i < array.length; i++) {
+            if (i+1 < array.length) {
+                sb.append(array[i]);
+                sb.append(",");
+            }else{ sb.append(array[i]); sb.append("}'");}
+        }
+        return sb.toString();
+    }
 
     public void addStudentToGroup(int studentId, String newGroup) {
         String query = "Update students SET classroom='" + newGroup +"' WHERE id=" + String.valueOf(studentId) + ";";
@@ -94,17 +109,18 @@ public class StudentDAOpostgress extends DAO implements StudentDAO {
             while (result.next()) {
                 List<String> recordsPropertiesList = new ArrayList<String>();
 
-                int id = result.getInt(0);
+                int id = result.getInt(1);
 
-                for (int i = 1; i<=5; i++) {
+                for (int i = 2; i<=5; i++) {
                     recordsPropertiesList.add(result.getString(i));
                 }
 
                 int[] quests = createArrayPropertyFromString(result.getString(6));
                 int[] artifacts = createArrayPropertyFromString(result.getString(7));
                 int[] groupArtifacts = createArrayPropertyFromString(result.getString(8));
-                int wallet = result.getInt(9);
-                int experience = result.getInt(10);
+                recordsPropertiesList.add(result.getString(9));
+                int wallet = result.getInt(10);
+                int experience = result.getInt(11);
 
                 studentsList.add(new Student(id,
                         recordsPropertiesList.get(0),
@@ -125,8 +141,9 @@ public class StudentDAOpostgress extends DAO implements StudentDAO {
 
 
     private int[] createArrayPropertyFromString(String arrayOfInt) {
-        arrayOfInt.replaceAll("\\[","");
-        arrayOfInt.replaceAll("]","");
+        arrayOfInt =  arrayOfInt.replaceAll("\\{","");
+        arrayOfInt = arrayOfInt.replaceAll("}","");
+        System.out.printf(arrayOfInt);
         String[] arrayOfReadyInt = arrayOfInt.split(",");
         int[] readyProperty = new int[arrayOfReadyInt.length];
         for (int i = 0; i < arrayOfReadyInt.length;i++) {
