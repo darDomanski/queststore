@@ -15,7 +15,7 @@ public class MainController {
     }
 
     public void run() {
-        creepyController.editMentor();
+        creepyController.showMentorProfile();
     }
 
 

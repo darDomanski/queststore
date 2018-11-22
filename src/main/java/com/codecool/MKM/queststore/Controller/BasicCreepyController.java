@@ -78,4 +78,38 @@ public class BasicCreepyController implements CreepyController {
 
         dao.editMentor(id, properties );
     }
+
+
+    public void showMentorProfile() {
+
+        showAllMentorsSortedByGroup();
+        int id = view.getIntegerInputFromUser("Enter id of mentor's to see his profile: ");
+
+        List<User> mentorInList = dao.getMentorById(id);
+
+        User mentor = mentorInList.get(0);
+
+        List<String> propertiesList = new ArrayList<String>();
+
+        propertiesList.add(String.valueOf(mentor.getId()));
+        propertiesList.add(mentor.getFirstName());
+        propertiesList.add(mentor.getNickname());
+        propertiesList.add(mentor.getPhone());
+        propertiesList.add(mentor.getEmail());
+        propertiesList.add(mentor.getGroup());
+
+        List<List<String>> listOfRecords = new ArrayList<List<String>>(); /// in this case one record
+
+        listOfRecords.add(propertiesList);
+
+        List<String> header = new ArrayList<String>();
+
+        String[] headerArray = {"Id:", "Name:", "Nickname:", "Phone:", "Email:", "Group:"};
+
+        for (String item : headerArray) {
+            header.add(item);
+        }
+
+        view.printTable(listOfRecords, header);
+    }
 }

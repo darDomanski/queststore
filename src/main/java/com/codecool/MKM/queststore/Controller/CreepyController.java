@@ -8,4 +8,6 @@ public interface CreepyController {
 
     public void editMentor();
 
+    public void showMentorProfile();
+
 }
