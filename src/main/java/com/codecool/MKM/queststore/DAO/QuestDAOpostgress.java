@@ -25,4 +25,8 @@ public class QuestDAOpostgress extends DAO implements QuestDAO {
         String itemsType = "quests";
         return getAllItems(itemsType);
     }
+
+    public ArrayList<Item> getUserQuests(){
+
+    }
 }

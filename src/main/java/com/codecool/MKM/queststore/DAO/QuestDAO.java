@@ -8,4 +8,5 @@ public interface QuestDAO {
 
     public void addNewQuest(Item itemToAdd);
     public ArrayList<Item> getAllQuests();
+    public ArrayList<Item> getUserQuests();
 }
