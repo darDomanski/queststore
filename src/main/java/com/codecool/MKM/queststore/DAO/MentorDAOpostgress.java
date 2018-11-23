@@ -1,8 +1,6 @@
 package com.codecool.MKM.queststore.DAO;
 
 import com.codecool.MKM.queststore.Model.Mentor;
-import com.codecool.MKM.queststore.Model.Quest;
-import com.codecool.MKM.queststore.Model.Student;
 import com.codecool.MKM.queststore.Model.User;
 
 import java.sql.Connection;
@@ -68,9 +66,8 @@ public class MentorDAOpostgress extends DAO implements MentorDAO {
                 "','" + mentor.getGroup() +  "');";
 
         Connection connection = this.openDataBase();
-        Statement statement = getStatement(connection);
 
-        editDataBase(query, connection, statement);
+        editDataBase(connection, query);
     }
 
 
@@ -78,9 +75,8 @@ public class MentorDAOpostgress extends DAO implements MentorDAO {
         String query = "Update mentors SET classroom='" + newGroup +"' WHERE id=" + String.valueOf(mentorId) + ";";
 
         Connection connection = this.openDataBase();
-        Statement statement = getStatement(connection);
 
-        editDataBase(query, connection, statement);
+        editDataBase(connection, query);
     }
 
 
@@ -97,9 +93,8 @@ public class MentorDAOpostgress extends DAO implements MentorDAO {
                 newProperties[4] + "' where id=" + mentorId + ";";
 
         Connection connection = this.openDataBase();
-        Statement statement = getStatement(connection);
 
-        editDataBase(query, connection, statement);
+        editDataBase(connection, query);
     }
 
 }

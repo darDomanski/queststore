@@ -1,6 +1,10 @@
 package com.codecool.MKM.queststore.DAO;
 
+import com.codecool.MKM.queststore.Model.Item;
+
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public abstract class DAO {
 
@@ -52,15 +56,38 @@ public abstract class DAO {
         return result;
     }
 
-    protected void editDataBase(String query, Connection connection, Statement statement) {
+    protected void editDataBase(Connection connection, String query) {
 
         try {
-            statement.executeUpdate(query);
+            PreparedStatement statement = connection.prepareStatement(query);
+            statement.executeUpdate();
+            closeStatementAndConnection(connection, statement);
         } catch (SQLException e) {
             e.printStackTrace();
             System.out.println("Data base error - check Your internet connection or try later!");
         }
-        closeStatementAndConnection(connection, statement);
+    }
+
+    protected ArrayList<Item> getAllItems(String itemsType){
+        String query = "SELECT * FROM "+ itemsType;
+        Connection connection = this.openDataBase();
+
+        List<Item> itemsList = new ArrayList<Item>();
+
+        try {
+            PreparedStatement statement = connection.prepareStatement(query);
+
+            ResultSet rs = statement.executeQuery();
+
+            while(rs.next()){
+                itemsList.add(new Item(rs.getInt("id"),rs.getString("firstname"),rs.getString("category"),rs.getInt("price")));
+            }
+
+        } catch(SQLException e) {
+            e.printStackTrace();
+        }
+
+        return (ArrayList<Item>) itemsList;
     }
 
 }

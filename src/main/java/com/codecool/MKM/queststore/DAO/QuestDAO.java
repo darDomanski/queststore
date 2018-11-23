@@ -1,11 +1,11 @@
 package com.codecool.MKM.queststore.DAO;
 
-import com.codecool.MKM.queststore.Model.Quest;
+import com.codecool.MKM.queststore.Model.Item;
 
 import java.util.ArrayList;
 
 public interface QuestDAO {
 
-    public void addNewQuest(Quest questToAdd);
-    public ArrayList<Quest> getAllQuests();
+    public void addNewQuest(Item itemToAdd);
+    public ArrayList<Item> getAllQuests();
 }

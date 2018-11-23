@@ -2,11 +2,10 @@ package com.codecool.MKM.queststore.Controller;
 
 import com.codecool.MKM.queststore.DAO.QuestDAO;
 import com.codecool.MKM.queststore.DAO.QuestDAOpostgress;
-import com.codecool.MKM.queststore.Model.Quest;
+import com.codecool.MKM.queststore.Model.Item;
 import com.codecool.MKM.queststore.View.Viewer;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class BasicStoreController implements StoreController {
 
@@ -19,10 +18,9 @@ public class BasicStoreController implements StoreController {
     }
 
     public void getAllQuests(){
-        System.out.println("i'm in get all quests");
-        ArrayList<Quest> questList = quest.getAllQuests();
-        for(int i=0; i<questList.size();i++){
-            System.out.println(questList.get(i).getName());
+        ArrayList<Item> itemList = quest.getAllQuests();
+        for(int i = 0; i< itemList.size(); i++){
+            System.out.println(itemList.get(i).getName());
         }
     }
 

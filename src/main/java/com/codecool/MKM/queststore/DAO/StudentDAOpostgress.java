@@ -28,9 +28,8 @@ public class StudentDAOpostgress extends DAO implements StudentDAO {
                 student.getExperience() + ");";
         System.out.println(query);
         Connection connection = this.openDataBase();
-        Statement statement = getStatement(connection);
 
-        editDataBase(query, connection, statement);
+        editDataBase(connection, query);
     }
 
 
@@ -50,36 +49,32 @@ public class StudentDAOpostgress extends DAO implements StudentDAO {
         String query = "Update students SET classroom='" + newGroup +"' WHERE id=" + String.valueOf(studentId) + ";";
 
         Connection connection = this.openDataBase();
-        Statement statement = getStatement(connection);
 
-        editDataBase(query, connection, statement);
+        editDataBase(connection, query);
     }
 
     public void markDoneQuestByStudent(int studentId, int[] doneQuests) {
         String query = "Update students SET quests=" + doneQuests + " where id=" + studentId + ";";
 
         Connection connection = this.openDataBase();
-        Statement statement = getStatement(connection);
 
-        editDataBase(query, connection, statement);
+        editDataBase(connection, query);
     }
 
     public void markBougthArtifactsByStudent(int studentId, int[] bougthArtifacts) {
         String query = "Update students SET artifacts=" + bougthArtifacts + " where id=" + studentId + ";";
 
         Connection connection = this.openDataBase();
-        Statement statement = getStatement(connection);
 
-        editDataBase(query, connection, statement);
+        editDataBase(connection, query);
     }
 
     public void buyArtifactsWithOtherStudents(int studentId, int[] bougthGroupArtifacts) {
         String query = "Update students SET classroom_artifacts=" + bougthGroupArtifacts + " where id=" + studentId + ";";
 
         Connection connection = this.openDataBase();
-        Statement statement = getStatement(connection);
 
-        editDataBase(query, connection, statement);
+        editDataBase(connection, query);
     }
 
 
