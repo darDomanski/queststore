@@ -1,6 +1,5 @@
 package com.codecool.MKM.queststore.DAO;
 
-import com.codecool.MKM.queststore.Model.Mentor;
 import com.codecool.MKM.queststore.Model.Student;
 import com.codecool.MKM.queststore.Model.User;
 
@@ -78,19 +77,19 @@ public class StudentDAOpostgress extends DAO implements StudentDAO {
     }
 
 
-    public List<User> getStudentById(int studentId) {
+    public List<Student> getStudentById(int studentId) {
         String query = "SELECT * FROM students WHERE id=" + studentId + ";";
         return getStudentsListFromDataBase(query);
     }
 
-    public List<User> getAllStudentsSortedByGroup() {
+    public List<Student> getAllStudentsSortedByGroup() {
         String query = "SELECT * FROM students ORDER BY classroom;";
 
         return getStudentsListFromDataBase(query);
     }
 
 
-    private List<User> getStudentsListFromDataBase(String query) {
+    private List<Student> getStudentsListFromDataBase(String query) {
 
         Connection connection = this.openDataBase();
 
@@ -98,7 +97,7 @@ public class StudentDAOpostgress extends DAO implements StudentDAO {
 
         ResultSet result = askDataBaseForData(query, connection, statement);
 
-        List<User> studentsList = new ArrayList<User>();
+        List<Student> studentsList = new ArrayList<Student>();
 
         try {
             while (result.next()) {
