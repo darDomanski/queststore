@@ -21,7 +21,7 @@ public class Viewer {
 
 
     private void printSeparateLine() {
-        System.out.println("---------------------------------------------------------------------------------------------------------------------------------------");
+        System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------------");
     }
 
 
@@ -73,7 +73,11 @@ public class Viewer {
         for (int i = 0; i<header.size(); i++) {
             if (i+1 != header.size()) {
                 System.out.print(header.get(i));
-                System.out.print("                    ");
+                int length = 30 - header.get(i).length();
+                for (int j = 0; j < length;j++){
+                    System.out.print(" ");
+                }
+
             }
             else{
                 System.out.println(header.get(i));
@@ -88,7 +92,11 @@ public class Viewer {
             for (int i = 0; i<record.size(); i++) {
                 if (i + 1 != record.size()) {
                     System.out.print(record.get(i));
-                    System.out.print("          ");
+                    int length = 30 - record.get(i).length();
+                    for (int j = 0; j < length;j++){
+                        System.out.print(" ");
+                    }
+
                 } else {
                     System.out.println(record.get(i));
                 }

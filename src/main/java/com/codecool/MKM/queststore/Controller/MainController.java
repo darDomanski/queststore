@@ -46,6 +46,11 @@ public class MainController {
 
     public void run() {
 
+//        mentorController.createStudent();
+//        mentorController.addQuest();
+//        mentorController.addStudentToGroup();
+//        studentController.seeVallet(3);
+
         boolean appRun = true;
         while(appRun) {
 
