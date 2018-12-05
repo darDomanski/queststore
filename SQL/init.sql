@@ -1,3 +1,9 @@
+CREATE TABLE active_sessions (
+userLogin text PRIMARY KEY,
+sessionId text UNIQUE,
+userType text);
+
+
 CREATE TABLE students (
     id SERIAL PRIMARY KEY,
     firstName text,
