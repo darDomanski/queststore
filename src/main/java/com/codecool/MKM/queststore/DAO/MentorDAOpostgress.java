@@ -61,6 +61,11 @@ public class MentorDAOpostgress extends DAO implements MentorDAO {
         return mentorsList;
     }
 
+    public List<User> getMentorByNickName(String nickname) {
+        String query = "SELECT * FROM students WHERE nickname=" + nickname + ";";
+        return getMentorsListFromDataBase(query);
+    }
+
 
     public void addMentorToDataBase(Mentor mentor) {
         String query = "INSERT INTO mentors VALUES(DEFAULT,'" + mentor.getFirstName() +

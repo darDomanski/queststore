@@ -1,15 +1,20 @@
 package com.codecool.MKM.queststore.DAO;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.sql.*;
 
 public abstract class DAO {
 
     public Connection openDataBase() {
         Connection c = null;
+        String[] logData = getDataBaseLogData("/home/k/codecool/Web/Quest Store/queststore/lib/dataBaseLoginData.csv");
         try {
             c = DriverManager
-                    .getConnection("jdbc:postgresql://localhost:5432/QuestStore",
-                            "Krzysztof", "jebacserwery");
+                    .getConnection(logData[0],
+                            logData[1], logData[2]);
         } catch (Exception e) {
             e.printStackTrace();
             System.err.println(e.getClass().getName()+": "+e.getMessage());
@@ -61,6 +66,26 @@ public abstract class DAO {
             System.out.println("Data base error - check Your internet connection or try later!");
         }
         closeStatementAndConnection(connection, statement);
+    }
+
+    private String[] getDataBaseLogData(String filePath) {
+
+        FileReader fileReader = null;
+        try {
+            fileReader = new FileReader(filePath);
+        } catch(FileNotFoundException e) {
+            e.printStackTrace();
+            System.out.println("You havent't file with data for login to data base!");
+        }
+        BufferedReader bf = new BufferedReader(fileReader);
+        String data = "";
+        try{
+            data = bf.readLine();
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("File is incorrect!");
+        }
+        return data.split(",");
     }
 
 }

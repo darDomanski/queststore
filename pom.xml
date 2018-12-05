@@ -3,10 +3,12 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.codecool.MKM.queststore</groupId>
   <artifactId>queststore</artifactId>
+
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
   <name>queststore</name>
   <url>http://maven.apache.org</url>
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
