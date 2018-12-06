@@ -90,4 +90,20 @@ public abstract class DAO {
         return (ArrayList<Item>) itemsList;
     }
 
+    protected void executeQuery(String query) {
+        Connection connection = openDataBase();
+
+        try {
+
+            PreparedStatement statement = connection.prepareStatement(query);
+
+            statement.executeUpdate();
+
+            closeStatementAndConnection(connection, statement);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
 }
