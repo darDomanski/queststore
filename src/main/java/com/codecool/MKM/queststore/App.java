@@ -12,6 +12,7 @@ public class App
 
         server.createContext("/login", new Login());
         server.createContext("/static", new Static());
+        server.createContext("/quest_store", new questStore());
         server.setExecutor(null); // creates a default executor
 
         server.start();

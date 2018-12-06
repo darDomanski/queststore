@@ -7,7 +7,7 @@ public class BasicSessionController implements SessionController{
     SessionDAO sessionDAO = new SessionDAOpostgress();
     @Override
     public void addNewSessionToDB(String login, String sessionID,  String userType){
-            sessionDAO.addNewSession(sessionID, login, userType);
+            sessionDAO.addNewSession(login, sessionID, userType);
             System.out.println("added!");
     }
 

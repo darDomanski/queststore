@@ -10,14 +10,14 @@ import java.util.Optional;
 
 public class SessionDAOpostgress extends DAO implements SessionDAO{
     public void addNewSession(String login, String sessionID,  String userType) {
-        String query = "INSERT INTO active_session (sessionid, userlogin, usertype) " +
+        String query = "INSERT INTO active_sessions (sessionid, userlogin, usertype) " +
                 "VALUES('" + sessionID + "', '" + login + "', '" + userType +"');";
         executeQuery(query);
     }
 
     @Override
     public void deleteSession(String sessionId) {
-        String query = "DELETE FROM active_session " +
+        String query = "DELETE FROM active_sessions " +
                 "WHERE sessionid LIKE '" + sessionId + "'";
         executeQuery(query);
     }
@@ -49,7 +49,7 @@ public class SessionDAOpostgress extends DAO implements SessionDAO{
 
     @Override
     public Optional<Session> getSession(String sessionId) {
-        String query = "SELECT * FROM active_session " +
+        String query = "SELECT * FROM active_sessions " +
                 "WHERE sessionid LIKE '"+ sessionId +"'";
         Connection connection = openDataBase();
         Optional<Session> activity = Optional.empty();

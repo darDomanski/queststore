@@ -30,35 +30,29 @@ public class Login implements HttpHandler {
     public void handle(HttpExchange httpExchange) throws IOException {
         String response = "";
         String method = httpExchange.getRequestMethod();
-        System.out.println("workin..");
 
         Optional<HttpCookie> cookie = cookieHelper.getSessionIdCookie(httpExchange, SESSION_COOKIE_NAME);
 
-        System.out.println(cookie);
 
-        String sessionId = "1";
+        String sessionId = "fakeid";
 
         if(cookie.isPresent()){
             sessionId = cookie.get().getValue().replace("\"", "");
         }
-
-        System.out.println("LOGIN SESSION ID AT START: " + sessionId);
 
 
         JtwigTemplate template;
         JtwigModel model = JtwigModel.newModel();
 
         if(method.equals("GET")){
-            System.out.println("LOGIN: " + cookie);
             if(session.isSessionActive(sessionId)){
-                template = JtwigTemplate.classpathTemplate("templates/store/inventory.html.twig");
+                template = JtwigTemplate.classpathTemplate("templates/store/questStore.html.twig");
                 response = template.render(model);
-                httpExchange.getResponseHeaders().add("Location", "/logout");
-                httpExchange.sendResponseHeaders(303, response.length());
+                httpExchange.sendResponseHeaders(303, 0);
             } else {
                 template = JtwigTemplate.classpathTemplate("templates/index.html.twig");
                 response = template.render(model);
-                httpExchange.sendResponseHeaders(200, response.length());
+                httpExchange.sendResponseHeaders(200, 0);
             }
 
         }
@@ -70,26 +64,40 @@ public class Login implements HttpHandler {
             String formData = br.readLine();
             Map inputs = parseFormData(formData);
 
-            String login = (String) inputs.get("login");
+            String login = (String) inputs.get("name");
             String password = (String) inputs.get("password");
+            String userType = loginController.getUserType(login);
 
-            if(!loginController.areCredentialsCorrect(login, password)){
 
+            if(loginController.areCredentialsCorrect(login, password)){
                 if (!session.isSessionActive(sessionId)) {
-                    String userType = loginController.getUserType(login);
                     sessionId = sessionIdGenerator.getSessionId();
                     cookie = Optional.of(new HttpCookie(SESSION_COOKIE_NAME, sessionId));
                     httpExchange.getResponseHeaders().add("Set-Cookie", cookie.get().toString());
                     session.addNewSessionToDB(login, sessionId, userType);
                 }
 
-                response = "change_page";
-                httpExchange.getResponseHeaders().add("Location", "/logout");
-                httpExchange.sendResponseHeaders(303, response.length());
+                    if(userType.equals("student")){
+
+                        httpExchange.getResponseHeaders().add("Location", "/quest_store");
+                        httpExchange.sendResponseHeaders(303, 0);
+
+                    } else if(userType.equals("mentor")){
+
+                        httpExchange.getResponseHeaders().add("Location", "/mentor_profile/"+ login +"");
+                        httpExchange.sendResponseHeaders(303, 0);
+
+                    } else if(userType.equals("creepy")){
+
+                        httpExchange.getResponseHeaders().add("Location", "/mentors_list/");
+                        httpExchange.sendResponseHeaders(303, 0);
+
+                    }
             } else {
-                template = JtwigTemplate.classpathTemplate("templates/login.html.twig");
+
+                template = JtwigTemplate.classpathTemplate("templates/index.html.twig");
                 response = template.render(model);
-                httpExchange.sendResponseHeaders(200, response.length());
+                httpExchange.sendResponseHeaders(200, 0);
             }
 
         }

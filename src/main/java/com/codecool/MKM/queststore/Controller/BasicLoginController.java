@@ -27,7 +27,6 @@ public class BasicLoginController implements LoginController {
     @Override
     public boolean areCredentialsCorrect(String login, String password) {
         List<List<String>> listOfUsers = loginDAO.getUsersListFromDataBase();
-
         Boolean isCorrect = false;
 
 
