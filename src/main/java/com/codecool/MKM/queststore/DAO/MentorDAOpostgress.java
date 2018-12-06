@@ -29,7 +29,7 @@ public class MentorDAOpostgress extends DAO implements MentorDAO {
 
         Statement statement = getStatement(connection);
 
-        ResultSet result = askDataBaseForData(query, connection, statement);
+        ResultSet result = askDataBaseForData(query, statement);
 
         List<User> mentorsList = new ArrayList<User>();
 

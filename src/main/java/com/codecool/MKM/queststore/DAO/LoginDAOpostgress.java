@@ -21,7 +21,7 @@ public class LoginDAOpostgress extends DAO implements LoginDAO {
 
         Statement statement = getStatement(connection);
 
-        ResultSet result = askDataBaseForData(getUsersQuery, connection, statement);
+        ResultSet result = askDataBaseForData(getUsersQuery, statement);
 
         List<List<String>> usersList = new ArrayList<List<String>>();
 
@@ -50,7 +50,7 @@ public class LoginDAOpostgress extends DAO implements LoginDAO {
 
         Statement statement = getStatement(connection);
 
-        askDataBaseForData(getUsersQuery, connection, statement);
+        askDataBaseForData(getUsersQuery, statement);
     }
 
 

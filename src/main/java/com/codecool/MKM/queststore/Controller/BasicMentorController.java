@@ -52,7 +52,7 @@ public class BasicMentorController implements MentorController {
 
     private void showAllStudents() {
 
-        List<User> studentsList = studentDAO.getAllStudentsSortedByGroup();
+        List<Student> studentsList = studentDAO.getAllStudentsSortedByGroup();
 
         List<List<String>> listOfRecords = new ArrayList<List<String>>();
         for (User student : studentsList) {

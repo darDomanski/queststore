@@ -18,8 +18,8 @@ public class BasicStudentController implements StudentController{
 
 
     public List<String> seeVallet(Integer id) {
-        List<User> studentList =  studentDAO.getStudentById(id);
-        Student student = (Student) studentList.get(0);
+        List<Student> studentList =  studentDAO.getStudentById(id);
+        Student student = studentList.get(0);
 
         List<String>  wallet = new ArrayList<String>();
         String coolCoins = String.valueOf(student.getWallet());

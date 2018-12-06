@@ -15,9 +15,9 @@ public interface StudentDAO {
 
     public void markBougthArtifactsByStudent(int studentId, int[] bougthArtifacts);
 
-    public List<User> getStudentById(int studentId);
+    public List<Student> getStudentById(int studentId);
 
-    public List<User> getAllStudentsSortedByGroup();
+    public List<Student> getAllStudentsSortedByGroup();
 
     public void buyArtifactsWithOtherStudents(int studentId, int[] bougthGroupArtifacts);
 }
