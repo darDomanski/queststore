@@ -5,7 +5,6 @@ import com.codecool.MKM.queststore.DAO.StudentDAOpostgress;
 import com.codecool.MKM.queststore.Model.Student;
 import com.codecool.MKM.queststore.Model.User;
 import com.codecool.MKM.queststore.View.Viewer;
-import sun.rmi.log.LogInputStream;
 
 import java.util.ArrayList;
 import java.util.List;

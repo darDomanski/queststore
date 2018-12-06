@@ -1,7 +1,5 @@
 package com.codecool.MKM.queststore.Model;
 
-import sun.awt.geom.AreaOp;
-
 public abstract class StoreItems {
 
     private String name;

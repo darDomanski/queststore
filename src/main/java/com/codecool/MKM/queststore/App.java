@@ -1,18 +1,21 @@
 package com.codecool.MKM.queststore;
 
 
-import com.codecool.MKM.queststore.Controller.MainController;
-import com.codecool.MKM.queststore.DAO.LoginDAOpostgress;
+import com.sun.net.httpserver.HttpServer;
+
+import java.net.InetSocketAddress;
 
 public class App
 {
-    public static void main( String[] args ) {
+    public static void main( String[] args ) throws Exception {
+        HttpServer server = HttpServer.create(new InetSocketAddress(8000), 0);
 
+        server.createContext("/login", new Login());
+        server.createContext("/static", new Static());
+        server.setExecutor(null); // creates a default executor
 
-//        LoginDAOpostgress DAO = new LoginDAOpostgress();
-//        DAO.getUsersListFromDataBase();
+        server.start();
 
-        MainController main = new MainController();
 
     }
 }
