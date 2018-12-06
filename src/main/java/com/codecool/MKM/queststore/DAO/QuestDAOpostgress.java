@@ -56,7 +56,7 @@ public class QuestDAOpostgress extends DAO implements QuestDAO {
         try {
             Connection connection = this.openDataBase();
             PreparedStatement statement = connection.prepareStatement(query);
-            ResultSet result = askDataBaseForData(query, connection, statement);
+            ResultSet result = askDataBaseForData(query, statement);
 
             while (result.next()) {
                 quest = new Item(result.getInt("id"), result.getString("firstname"), result.getString("category"), result.getInt("price"));

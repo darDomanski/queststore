@@ -95,7 +95,7 @@ public class StudentDAOpostgress extends DAO implements StudentDAO {
 
         Statement statement = getStatement(connection);
 
-        ResultSet result = askDataBaseForData(query, connection, statement);
+        ResultSet result = askDataBaseForData(query, statement);
 
         List<Student> studentsList = new ArrayList<Student>();
 

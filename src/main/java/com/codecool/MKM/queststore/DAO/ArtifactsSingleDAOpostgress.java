@@ -52,7 +52,7 @@ public class ArtifactsSingleDAOpostgress extends DAO implements ArtifactsGroupsD
         try {
             Connection connection = this.openDataBase();
             PreparedStatement statement = connection.prepareStatement(query);
-            ResultSet result = askDataBaseForData(query, connection, statement);
+            ResultSet result = askDataBaseForData(query, statement);
 
             while (result.next()) {
                 if(artifactType == "artifacts"){

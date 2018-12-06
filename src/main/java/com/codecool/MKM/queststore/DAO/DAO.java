@@ -45,7 +45,7 @@ public abstract class DAO {
 
 
 
-    protected ResultSet askDataBaseForData(String query, Connection connection, Statement statement) {
+    protected ResultSet askDataBaseForData(String query, Statement statement) {
 
         ResultSet result = null;
         try {
