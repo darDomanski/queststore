@@ -3,10 +3,7 @@ package com.codecool.MKM.queststore.DAO;
 import com.codecool.MKM.queststore.Model.Student;
 import com.codecool.MKM.queststore.Model.User;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -93,7 +90,12 @@ public class StudentDAOpostgress extends DAO implements StudentDAO {
 
         Connection connection = this.openDataBase();
 
-        Statement statement = getStatement(connection);
+        PreparedStatement statement = null;
+        try {
+            statement = connection.prepareStatement(query);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
         ResultSet result = askDataBaseForData(query, statement);
 

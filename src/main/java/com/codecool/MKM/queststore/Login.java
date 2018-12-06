@@ -51,7 +51,7 @@ public class Login implements HttpHandler {
         if(method.equals("GET")){
             System.out.println("LOGIN: " + cookie);
             if(session.isSessionActive(sessionId)){
-                template = JtwigTemplate.classpathTemplate("./views/logout.html.twig");
+                template = JtwigTemplate.classpathTemplate("templates/store/inventory.html.twig");
                 response = template.render(model);
                 httpExchange.getResponseHeaders().add("Location", "/logout");
                 httpExchange.sendResponseHeaders(303, response.length());
@@ -73,7 +73,7 @@ public class Login implements HttpHandler {
             String login = (String) inputs.get("login");
             String password = (String) inputs.get("password");
 
-            if(!loginController.userVerification(login, password).equals("")){
+            if(!loginController.areCredentialsCorrect(login, password)){
 
                 if (!session.isSessionActive(sessionId)) {
                     String userType = loginController.getUserType(login);

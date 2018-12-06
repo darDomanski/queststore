@@ -3,10 +3,7 @@ package com.codecool.MKM.queststore.DAO;
 import com.codecool.MKM.queststore.Model.Mentor;
 import com.codecool.MKM.queststore.Model.User;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,10 +23,16 @@ public class MentorDAOpostgress extends DAO implements MentorDAO {
     private List<User> getMentorsListFromDataBase(String query) {
 
         Connection connection = this.openDataBase();
+        PreparedStatement statement = null;
+        ResultSet result = null;
 
-        Statement statement = getStatement(connection);
+        try {
+            statement = connection.prepareStatement(query);
 
-        ResultSet result = askDataBaseForData(query, statement);
+            result = askDataBaseForData(query, statement);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
         List<User> mentorsList = new ArrayList<User>();
 

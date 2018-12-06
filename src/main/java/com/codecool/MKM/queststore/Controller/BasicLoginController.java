@@ -10,14 +10,14 @@ public class BasicLoginController implements LoginController {
     LoginDAO loginDAO = new LoginDAOpostgress();
 
     @Override
-    public String areCredentialsCorrect(String login, String password) {
+    public String getUserType(String login) {
         List<List<String>> listOfUsers = loginDAO.getUsersListFromDataBase();
 
         String typeOfUser = "";
 
 
         for (List<String> user : listOfUsers) {
-            if (user.get(0).equals(login) && user.get(1).equals(password)) {
+            if (user.get(0).equals(login)) {
                 typeOfUser = user.get(2);
             }
         }
@@ -25,8 +25,18 @@ public class BasicLoginController implements LoginController {
     }
 
     @Override
-    public String getUserType(String login) {
-        return null;
+    public boolean areCredentialsCorrect(String login, String password) {
+        List<List<String>> listOfUsers = loginDAO.getUsersListFromDataBase();
+
+        Boolean isCorrect = false;
+
+
+        for (List<String> user : listOfUsers) {
+            if (user.get(0).equals(login) && user.get(1).equals(password)) {
+                isCorrect = true;
+            }
+        }
+        return isCorrect;
     }
 }
 

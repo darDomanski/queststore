@@ -1,9 +1,7 @@
 package com.codecool.MKM.queststore.DAO;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import javax.xml.transform.Result;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,12 +14,19 @@ public class LoginDAOpostgress extends DAO implements LoginDAO {
 
 
     public List<List<String>> getUsersListFromDataBase() {
-
         Connection connection = this.openDataBase();
+        ResultSet result = null;
+        PreparedStatement statement = null;
 
-        Statement statement = getStatement(connection);
+        String query = getUsersQuery;
 
-        ResultSet result = askDataBaseForData(getUsersQuery, statement);
+        try {
+            statement = connection.prepareStatement(query);
+
+            result = askDataBaseForData(getUsersQuery, statement);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
         List<List<String>> usersList = new ArrayList<List<String>>();
 
@@ -48,9 +53,15 @@ public class LoginDAOpostgress extends DAO implements LoginDAO {
         String query = createQueryToRemoveUserByLogin(login);
         Connection connection = this.openDataBase();
 
-        Statement statement = getStatement(connection);
+        try {
 
-        askDataBaseForData(getUsersQuery, statement);
+            PreparedStatement statement = connection.prepareStatement(query);
+            askDataBaseForData(getUsersQuery, statement);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
     }
 
 
