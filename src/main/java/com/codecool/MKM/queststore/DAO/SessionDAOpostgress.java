@@ -26,7 +26,7 @@ public class SessionDAOpostgress extends DAO implements SessionDAO{
     public boolean checkSessionStatus(String sessionId) {
         boolean isActive = false;
 
-        String query = "SELECT * FROM active_session " +
+        String query = "SELECT * FROM active_sessions " +
                 "WHERE sessionid LIKE '" + sessionId + "';";
         Connection connection = openDataBase();
 

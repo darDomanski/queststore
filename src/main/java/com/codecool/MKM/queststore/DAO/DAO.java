@@ -49,7 +49,7 @@ public abstract class DAO {
 
         ResultSet result = null;
         try {
-            result = statement.executeQuery(query);
+            result = statement.executeQuery();
         } catch (SQLException e) {
             e.printStackTrace();
         }
