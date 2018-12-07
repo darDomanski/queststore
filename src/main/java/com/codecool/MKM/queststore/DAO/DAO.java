@@ -12,8 +12,9 @@ public abstract class DAO {
         Connection c = null;
         try {
             c = DriverManager
-                    .getConnection("jdbc:postgresql://localhost:5432/questStore",
-                            "postgres", "test");
+                    .getConnection("jdbc:postgresql://localhost:5432/QuestStore",
+                            "mihuadmin", "lokas777");
+
         } catch (Exception e) {
             e.printStackTrace();
             System.err.println(e.getClass().getName()+": "+e.getMessage());
