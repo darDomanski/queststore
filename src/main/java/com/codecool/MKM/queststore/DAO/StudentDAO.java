@@ -4,6 +4,7 @@ import com.codecool.MKM.queststore.Model.Student;
 import com.codecool.MKM.queststore.Model.User;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface StudentDAO {
 
@@ -16,6 +17,8 @@ public interface StudentDAO {
     public void markBougthArtifactsByStudent(int studentId, int[] bougthArtifacts);
 
     public List<Student> getStudentById(int studentId);
+
+    public Optional<Student> getStudentByNickName(String name);
 
     public List<Student> getAllStudentsSortedByGroup();
 

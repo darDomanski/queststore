@@ -54,8 +54,8 @@ public class questStoreQuests implements HttpHandler {
                 String profilePicture = questStore.getProfilePicture(login);
 
                 model.with("categories", categories);
-                model.with("questPictures", questsPictures);
-                model.with("questDescriptions", questsDescriptions);
+                model.with("questsPictures", questsPictures);
+                model.with("questsDescriptions", questsDescriptions);
                 model.with("cards", quests);
                 model.with("profilePicture", profilePicture);
 
