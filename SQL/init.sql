@@ -262,4 +262,23 @@ INSERT INTO login VALUES(
     'mentors'
 );
 
+INSERT INTO photoartifact VALUES (
+    'Sword',
+    'sword.jpg'
+);
+
+INSERT INTO photoartifact VALUES (
+    'Helmet',
+    'helmet.jpg'
+);
+
+INSERT INTO describeartifact VALUES (
+    'Helmet',
+    'For health and safety purposes'
+);
+
+INSERT INTO describeartifact VALUES (
+    'Sword',
+    'To cut off some heads'
+);
  
