@@ -39,7 +39,7 @@ public class Login implements HttpHandler {
         if(cookie.isPresent()){
             sessionId = cookie.get().getValue().replace("\"", "");
         }
-
+        System.out.println("SESSION ID: " + sessionId);
 
         JtwigTemplate template;
         JtwigModel model = JtwigModel.newModel();
