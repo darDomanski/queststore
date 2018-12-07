@@ -7,6 +7,7 @@ import com.codecool.MKM.queststore.Model.User;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class BasicStudentController implements StudentController{
 
@@ -25,6 +26,11 @@ public class BasicStudentController implements StudentController{
         String coolCoins = String.valueOf(student.getWallet());
         wallet.add(coolCoins);
         return wallet;
+    }
+
+    public Optional<Student> getStudentByName(String name){
+        Optional<Student> student = studentDAO.getStudentByNickName(name);
+        return student;
     }
 
     public void buyArtifactSingle() {

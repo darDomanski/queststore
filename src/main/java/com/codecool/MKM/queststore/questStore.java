@@ -1,11 +1,9 @@
 package com.codecool.MKM.queststore;
 
-import com.codecool.MKM.queststore.Controller.BasicSessionController;
-import com.codecool.MKM.queststore.Controller.BasicStoreController;
-import com.codecool.MKM.queststore.Controller.SessionController;
-import com.codecool.MKM.queststore.Controller.StoreController;
+import com.codecool.MKM.queststore.Controller.*;
 import com.codecool.MKM.queststore.Helpers.CookieHelper;
 import com.codecool.MKM.queststore.Model.Item;
+import com.codecool.MKM.queststore.Model.Student;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import org.jtwig.JtwigModel;
@@ -23,6 +21,7 @@ public class questStore implements HttpHandler {
     CookieHelper cookieHelper = new CookieHelper();
     SessionController session = new BasicSessionController();
     StoreController questStore = new BasicStoreController();
+    StudentController studentController = new BasicStudentController();
     @Override
     public void handle(HttpExchange httpExchange) throws IOException {
         String response = "";
@@ -47,15 +46,19 @@ public class questStore implements HttpHandler {
 
                 List<String> categories = questStore.getAllCategories(artifacts);
                 Map<String, String> artifactsPictures = questStore.getArtefactsPictures();
-                System.out.println("ARTIFACTSPICTURES TO STRING: " + artifactsPictures.toString());
+
+                Optional<Student> student = studentController.getStudentByName(login);
+                int coolcoins = student.get().getWallet();
 
                 Map<String, String> artifactsDescriptions = questStore.getArtefactsDescriptions();
                 String profilePicture = questStore.getProfilePicture(login);
+
                 model.with("categories", categories);
                 model.with("artifactPictures", artifactsPictures);
                 model.with("artifactDescriptions", artifactsDescriptions);
                 model.with("cards", artifacts);
                 model.with("profilePicture", profilePicture);
+                model.with("coolcoins", coolcoins);
 
                 template = JtwigTemplate.classpathTemplate("templates/store/questStore.twig");
                 response = template.render(model);

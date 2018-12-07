@@ -281,6 +281,8 @@ body{
     width: 40%;
     height: 30px;
     background-color: green;
+    display: flex;
+    align-items: center;
 }
 
 #menu-options{
@@ -399,7 +401,7 @@ hr{
     top: 0;
     left: 0;
     z-index: 5;
-  }
+ }
 
 .new-element{
   font-size: 100px;
@@ -410,4 +412,11 @@ hr{
 
 .new-element .fa-plus{
   color:#ff3b39;
+}
+
+#coolcoins {
+    width: 100%;
+    text-align: center;
+    text-shadow: 1px 1px 1px black;
+    color: white;
 }
