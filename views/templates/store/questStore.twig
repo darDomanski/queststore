@@ -16,8 +16,8 @@
 			<div id="menu-options">
 				<ul id="bar">
 				   <li class='active tab'><a href='#'><span>Artefacts</span></a></li>
-				   <li class='tab'><a href='quests.html'><span>Quests</span></a></li>
-				   <li class='last tab'><a href='inventory.html'><span>Inventory</span></a></li>
+				   <li class='tab'><a href='/quests'><span>Quests</span></a></li>
+				   <!--<li class='last tab'><a href='inventory.html'><span>Inventory</span></a></li>-->
 				</ul>
 			</div>
 			<div id="shop-name"><p>QUEST STORE</p></div>
@@ -26,7 +26,7 @@
 			 		<div id="my-bar"></div>
 				</div>
 			</div>
-				<a id="profile-link" href="../managmentSystem/student_profile.html"><img id="profile-pic" src="./static/images/student1.jpg"></a>
+				<a id="profile-link" href="../managmentSystem/student_profile.html"><img id="profile-pic" src="./static/images/"+{{profilePicture}}></a>
 		</div>
 	</div>
 	</div>
@@ -46,7 +46,20 @@
 				{% for card in cards %}
 				{%  if card.category == category %}
 					<div class="card">
-						<div class="thumbnail" style='background-image:url("./static/images/{{ card_img }}")'>
+
+						{% for k,v in artefactPictures %}
+							{% if k == card.name %}
+								{% set card_img = v %}
+							{% endif %}
+						{% endfor %}
+
+						{% for k,v in artefactDescription %}
+							{% if k == card.name %}
+								{% set card_description = v %}
+							{% endif %}
+						{% endfor %}
+
+						<div class="thumbnail" style='background-image:url("./static/images/"+{{ card_img }})'>
 							<p class="coin">{{ card.price }}</p>
 							<div class="caption"><h3>{{card.name}}</h3></div>
 							<hr>

@@ -18,11 +18,13 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
-public class questStore implements HttpHandler {
+public class questStoreQuests implements HttpHandler {
+
     private final String SESSION_COOKIE_NAME = "sessionId";
     CookieHelper cookieHelper = new CookieHelper();
     SessionController session = new BasicSessionController();
     StoreController questStore = new BasicStoreController();
+
     @Override
     public void handle(HttpExchange httpExchange) throws IOException {
         String response = "";
@@ -43,21 +45,21 @@ public class questStore implements HttpHandler {
         if(method.equals("GET")){
             if(session.isSessionActive(sessionId)){
                 String login = session.getUserLogin(sessionId);
-                List<Item> artifacts = questStore.getAllArtifacts();
+                List<Item> quests = questStore.getAllQuests();
 
-                List<String> categories = questStore.getAllCategories(artifacts);
+                List<String> categories = questStore.getAllCategories(quests);
 
-                Map<String, String> artifactsPictures = questStore.getArtefactsPictures();
-                Map<String, String> artifactsDescriptions = questStore.getArtefactsDescriptions();
+                Map<String, String> questsPictures = questStore.getQuestsPictures();
+                Map<String, String> questsDescriptions = questStore.getQuestsDescriptions();
                 String profilePicture = questStore.getProfilePicture(login);
 
                 model.with("categories", categories);
-                model.with("questPictures", artifactsPictures);
-                model.with("questDescriptions", artifactsDescriptions);
-                model.with("cards", artifacts);
+                model.with("questPictures", questsPictures);
+                model.with("questDescriptions", questsDescriptions);
+                model.with("cards", quests);
                 model.with("profilePicture", profilePicture);
 
-                template = JtwigTemplate.classpathTemplate("templates/store/questStore.twig");
+                template = JtwigTemplate.classpathTemplate("templates/store/quests.twig");
                 response = template.render(model);
                 httpExchange.sendResponseHeaders(303, 0);
             } else {
@@ -73,3 +75,4 @@ public class questStore implements HttpHandler {
     }
 
 }
+

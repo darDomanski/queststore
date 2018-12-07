@@ -1,24 +1,25 @@
 package com.codecool.MKM.queststore.Controller;
 
-import com.codecool.MKM.queststore.DAO.ArtifactsSingleDAO;
-import com.codecool.MKM.queststore.DAO.ArtifactsSingleDAOpostgress;
-import com.codecool.MKM.queststore.DAO.QuestDAO;
-import com.codecool.MKM.queststore.DAO.QuestDAOpostgress;
+import com.codecool.MKM.queststore.DAO.*;
 import com.codecool.MKM.queststore.Model.Item;
 import com.codecool.MKM.queststore.View.Viewer;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class BasicStoreController implements StoreController {
 
     Viewer view;
     QuestDAO quest;
     ArtifactsSingleDAO artifacts;
+    MediaDaoPostgress mediaDao;
+
     public BasicStoreController() {
         view = new Viewer();
         quest = new QuestDAOpostgress();
         artifacts = new ArtifactsSingleDAOpostgress();
+        mediaDao = new MediaDaoPostgress();
     }
 
     public List<Item> getAllQuests(){
@@ -36,6 +37,31 @@ public class BasicStoreController implements StoreController {
         }
 
         return categories;
+    }
+
+    @Override
+    public Map<String, String> getQuestsPictures() {
+        return mediaDao.getMedia("photoquest");
+    }
+
+    @Override
+    public Map<String, String> getQuestsDescriptions() {
+        return mediaDao.getMedia("describequest");
+    }
+
+    @Override
+    public Map<String, String> getArtefactsDescriptions() {
+        return mediaDao.getMedia("describeartifact");
+    }
+
+    @Override
+    public Map<String, String> getArtefactsPictures() {
+        return mediaDao.getMedia("photoartifact");
+    }
+
+    @Override
+    public String getProfilePicture(String name) {
+        return mediaDao.getMedia("photouser").get(name);
     }
 
     public List<Item> getAllArtifacts(){
