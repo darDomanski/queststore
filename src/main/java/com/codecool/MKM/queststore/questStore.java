@@ -49,6 +49,7 @@ public class questStore implements HttpHandler {
 
                 Optional<Student> student = studentController.getStudentByName(login);
                 int coolcoins = student.get().getWallet();
+                System.out.println(artifactsPictures.toString());
 
                 Map<String, String> artifactsDescriptions = questStore.getArtefactsDescriptions();
                 String profilePicture = questStore.getProfilePicture(login);
