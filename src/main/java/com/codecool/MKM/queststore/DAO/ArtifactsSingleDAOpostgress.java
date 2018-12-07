@@ -9,7 +9,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ArtifactsSingleDAOpostgress extends DAO implements ArtifactsGroupsDAO {
+public class ArtifactsSingleDAOpostgress extends DAO implements ArtifactsSingleDAO {
 
     StudentDAO student = new StudentDAOpostgress();
 
@@ -22,18 +22,20 @@ public class ArtifactsSingleDAOpostgress extends DAO implements ArtifactsGroupsD
         editDataBase(connection, query);
     }
 
-    public ArrayList<Item> getAllArtifacts(){
+    public List<Item> getAllArtifacts(){
         String itemsType = "artifacts";
         return getAllItems(itemsType);
     }
 
-    public void getUserArtifacts(int userId){
+    public List<StoreItems> getUserArtifacts(int userId){
         List<Student> studentById = student.getStudentById(userId);
         Student studentModel = studentById.get(0);
         int[] studentArtifactsId = studentModel.getArtifacts();
         int[] studentGroupArtifactsId = studentModel.getGroupArtifacts();
         ArrayList<StoreItems> singleArtifacts = getArtifactsById(studentArtifactsId, "artifacts");
         ArrayList<StoreItems> groupArtifacts = getArtifactsById(studentGroupArtifactsId, "clasroom_artifacts");
+
+        return singleArtifacts;
     }
 
     public ArrayList<StoreItems> getArtifactsById(int[] artifactsId, String artifactType){

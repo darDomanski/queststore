@@ -46,8 +46,7 @@ public class Login implements HttpHandler {
 
         if(method.equals("GET")){
             if(session.isSessionActive(sessionId)){
-                template = JtwigTemplate.classpathTemplate("templates/store/questStore.html.twig");
-                response = template.render(model);
+                httpExchange.getResponseHeaders().add("Location", "/quest_store");
                 httpExchange.sendResponseHeaders(303, 0);
             } else {
                 template = JtwigTemplate.classpathTemplate("templates/index.html.twig");

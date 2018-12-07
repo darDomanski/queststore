@@ -3,7 +3,7 @@ html{
   height: 100%;
   width: 100%;
   min-height:100%;
-  background: lightblue url("../../../images/trees.png");
+  background: lightblue url("../../images/trees.png");
 }
 body{
   width: 100%;
