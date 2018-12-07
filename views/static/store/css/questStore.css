@@ -414,6 +414,12 @@ hr{
   color:#ff3b39;
 }
 
+div#logOut {
+    width: 100%;
+    z-index: 11;
+    flex-basis: 10%;
+}
+
 #coolcoins {
     width: 100%;
     text-align: center;
