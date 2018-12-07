@@ -9,4 +9,6 @@ public interface SessionDAO {
     void deleteSession(String sessionId);
     boolean checkSessionStatus(String sessionId);
     Optional<Session> getSession(String sessionId);
+
+    void deleteSessionBylogin(String login);
 }

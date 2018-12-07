@@ -1,6 +1,11 @@
 package com.codecool.MKM.queststore;
 
 import com.codecool.MKM.queststore.Controller.*;
+import com.codecool.MKM.queststore.Controller.BasicSessionController;
+import com.codecool.MKM.queststore.Controller.BasicStoreController;
+import com.codecool.MKM.queststore.Controller.SessionController;
+import com.codecool.MKM.queststore.Controller.StoreController;
+import com.codecool.MKM.queststore.DAO.SessionDAOpostgress;
 import com.codecool.MKM.queststore.Helpers.CookieHelper;
 import com.codecool.MKM.queststore.Model.Item;
 import com.codecool.MKM.queststore.Model.Student;
@@ -9,9 +14,10 @@ import com.sun.net.httpserver.HttpHandler;
 import org.jtwig.JtwigModel;
 import org.jtwig.JtwigTemplate;
 
-import java.io.IOException;
-import java.io.OutputStream;
+import java.io.*;
 import java.net.HttpCookie;
+import java.net.URLDecoder;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -70,10 +76,39 @@ public class questStoreQuests implements HttpHandler {
             }
 
         }
+        if(method.equals("POST")) {
+            System.out.println("guxik dziasl");
+            InputStreamReader isr = new InputStreamReader(httpExchange.getRequestBody(), "utf-8");
+            BufferedReader br = new BufferedReader(isr);
+            String formData = br.readLine();
+            Map inputs = parseFormData(formData);
+
+            if (inputs.containsKey("logOut")) {
+
+                SessionDAOpostgress dao = new SessionDAOpostgress();
+
+                dao.deleteSession(sessionId);
+            }
+            httpExchange.getResponseHeaders().add("Location", "/login");
+            httpExchange.sendResponseHeaders(303, 0);
+        }
 
         OutputStream os = httpExchange.getResponseBody();
         os.write(response.getBytes());
         os.close();
+    }
+
+
+    public Map<String, String> parseFormData(String formData) throws UnsupportedEncodingException {
+        Map<String, String> map = new HashMap<String, String>();
+        String[] pairs = formData.split("&");
+        for(String pair : pairs){
+            String[] keyValue = pair.split("=");
+            // We have to decode the value because it's urlencoded. see: https://en.wikipedia.org/wiki/POST_(HTTP)#Use_for_submitting_web_forms
+            String value = new URLDecoder().decode(keyValue[1], "UTF-8");
+            map.put(keyValue[0], value);
+        }
+        return map;
     }
 
 }

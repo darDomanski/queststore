@@ -16,6 +16,12 @@ public class SessionDAOpostgress extends DAO implements SessionDAO{
     }
 
     @Override
+    public void deleteSessionBylogin(String login) {
+        String query = "DELETE FROM active_sessions " +
+                "WHERE userlogin LIKE '" + login + "'";
+        executeQuery(query);
+    }
+
     public void deleteSession(String sessionId) {
         String query = "DELETE FROM active_sessions " +
                 "WHERE sessionid LIKE '" + sessionId + "'";

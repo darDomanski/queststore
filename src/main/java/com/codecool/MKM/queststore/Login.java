@@ -68,6 +68,7 @@ public class Login implements HttpHandler {
             String userType = loginController.getUserType(login);
 
 
+
             if(loginController.areCredentialsCorrect(login, password)){
                 if (!session.isSessionActive(sessionId)) {
                     sessionId = sessionIdGenerator.getSessionId();
