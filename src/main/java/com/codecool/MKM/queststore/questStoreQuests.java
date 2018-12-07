@@ -1,11 +1,9 @@
 package com.codecool.MKM.queststore;
 
-import com.codecool.MKM.queststore.Controller.BasicSessionController;
-import com.codecool.MKM.queststore.Controller.BasicStoreController;
-import com.codecool.MKM.queststore.Controller.SessionController;
-import com.codecool.MKM.queststore.Controller.StoreController;
+import com.codecool.MKM.queststore.Controller.*;
 import com.codecool.MKM.queststore.Helpers.CookieHelper;
 import com.codecool.MKM.queststore.Model.Item;
+import com.codecool.MKM.queststore.Model.Student;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import org.jtwig.JtwigModel;
@@ -24,7 +22,7 @@ public class questStoreQuests implements HttpHandler {
     CookieHelper cookieHelper = new CookieHelper();
     SessionController session = new BasicSessionController();
     StoreController questStore = new BasicStoreController();
-
+    StudentController studentController = new BasicStudentController();
     @Override
     public void handle(HttpExchange httpExchange) throws IOException {
         String response = "";
@@ -49,6 +47,9 @@ public class questStoreQuests implements HttpHandler {
 
                 List<String> categories = questStore.getAllCategories(quests);
 
+                Optional<Student> student = studentController.getStudentByName(login);
+                int coolcoins = student.get().getWallet();
+
                 Map<String, String> questsPictures = questStore.getQuestsPictures();
                 Map<String, String> questsDescriptions = questStore.getQuestsDescriptions();
                 String profilePicture = questStore.getProfilePicture(login);
@@ -58,6 +59,7 @@ public class questStoreQuests implements HttpHandler {
                 model.with("questsDescriptions", questsDescriptions);
                 model.with("cards", quests);
                 model.with("profilePicture", profilePicture);
+                model.with("coolcoins", coolcoins);
 
                 template = JtwigTemplate.classpathTemplate("templates/store/quests.twig");
                 response = template.render(model);
