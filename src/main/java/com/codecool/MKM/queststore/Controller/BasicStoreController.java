@@ -9,6 +9,7 @@ import com.codecool.MKM.queststore.View.Viewer;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class BasicStoreController implements StoreController {
 
@@ -36,6 +37,31 @@ public class BasicStoreController implements StoreController {
         }
 
         return categories;
+    }
+
+    @Override
+    public Map<String, String> getQuestsPictures() {
+        return null;
+    }
+
+    @Override
+    public Map<String, String> getQuestsDescriptions() {
+        return null;
+    }
+
+    @Override
+    public Map<String, String> getArtefactsDescriptions() {
+        return null;
+    }
+
+    @Override
+    public Map<String, String> getArtefactsPictures() {
+        return null;
+    }
+
+    @Override
+    public String getProfilePicture(String name) {
+        return null;
     }
 
     public List<Item> getAllArtifacts(){

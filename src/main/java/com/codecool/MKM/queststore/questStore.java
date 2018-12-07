@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.net.HttpCookie;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 public class questStore implements HttpHandler {
@@ -46,9 +47,16 @@ public class questStore implements HttpHandler {
 
                 List<String> categories = questStore.getAllCategories(artifacts);
 
-                model.with("categories", categories);
+                Map<String, String> questsPictures = questStore.getQuestsPictures();
+                Map<String, String> questsDescriptions = questStore.getQuestsDescriptions();
+                String profilePicture = questStore.getProfilePicture(login);
 
+                model.with("categories", categories);
+                model.with("questPictures", questsPictures);
+                model.with("questDescriptions", questsDescriptions);
                 model.with("cards", artifacts);
+                model.with("profilePicture", profilePicture);
+
                 template = JtwigTemplate.classpathTemplate("templates/store/questStore.twig");
                 response = template.render(model);
                 httpExchange.sendResponseHeaders(303, 0);
