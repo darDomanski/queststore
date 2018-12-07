@@ -46,14 +46,14 @@ public class questStore implements HttpHandler {
                 List<Item> artifacts = questStore.getAllArtifacts();
 
                 List<String> categories = questStore.getAllCategories(artifacts);
-
                 Map<String, String> artifactsPictures = questStore.getArtefactsPictures();
+                System.out.println("ARTIFACTSPICTURES TO STRING: " + artifactsPictures.toString());
+
                 Map<String, String> artifactsDescriptions = questStore.getArtefactsDescriptions();
                 String profilePicture = questStore.getProfilePicture(login);
-
                 model.with("categories", categories);
-                model.with("questPictures", artifactsPictures);
-                model.with("questDescriptions", artifactsDescriptions);
+                model.with("artifactPictures", artifactsPictures);
+                model.with("artifactDescriptions", artifactsDescriptions);
                 model.with("cards", artifacts);
                 model.with("profilePicture", profilePicture);
 
