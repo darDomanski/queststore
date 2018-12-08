@@ -48,6 +48,23 @@
 				</ul>
 			</div>
 			<div class="cards hide" class="row text-center">
+
+                <!--{% if isMentor %}-->
+                    <!--<div class="card" id="add-card">-->
+                        <!--<div class="thumbnail" style='background-image:url("../images/empty.jpeg")'>-->
+                            <!--<p class="coin">?</p>-->
+                            <!--<div class="caption"><h3>ADD NEW</h3></div>-->
+                            <!--<hr>-->
+                            <!--<div class="new-element"><a href="#"><i class="fas fa-plus"></i></a></div>-->
+                            <!--<div class="description">-->
+                                <!--<h6>Here is some text you can add</h6>-->
+                            <!--</div>-->
+                            <!--<div class="blur"></div>-->
+                            <!--<div class="blur2"></div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--{% endif %}-->
+
 				{% for card in cards %}
 				{%  if card.category == category %}
 					<div class="card">
