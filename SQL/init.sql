@@ -1,3 +1,52 @@
+CREATE TABLE photoUser (
+login text UNIQUE,
+picture_name text);
+
+CREATE TABLE photoArtifact (
+artifact_name text UNIQUE,
+picture_name text);
+
+CREATE TABLE photoQuest (
+quest_name text UNIQUE,
+picture_name text);
+
+
+CREATE TABLE describeArtifact (
+artifact_name text UNIQUE,
+description text);
+
+
+CREATE TABLE describeQuest (
+quest_name text UNIQUE,
+description text);
+
+
+INSERT INTO photoUser VALUES (
+'Puchatek',
+'puchatek.jpg');
+
+INSERT INTO photoArtifact VALUES (
+'Axe',
+'axe.jpg');
+
+INSERT INTO photoQuest VALUES (
+'Master of morning',
+'masterofmorning.jpg');
+
+
+INSERT INTO describeArtifact VALUES (
+'Axe',
+'Very strongfull axe without magic force. Usefull for cut off heads.');
+
+
+
+INSERT INTO describeQuest VALUES (
+'Master of morning',
+'90 days without late and absent');
+
+
+
+
 CREATE TABLE active_sessions (
 userLogin text PRIMARY KEY,
 sessionId text UNIQUE,
@@ -213,4 +262,23 @@ INSERT INTO login VALUES(
     'mentors'
 );
 
+INSERT INTO photoartifact VALUES (
+    'Sword',
+    'sword.jpg'
+);
+
+INSERT INTO photoartifact VALUES (
+    'Helmet',
+    'helmet.jpg'
+);
+
+INSERT INTO describeartifact VALUES (
+    'Helmet',
+    'For health and safety purposes'
+);
+
+INSERT INTO describeartifact VALUES (
+    'Sword',
+    'To cut off some heads'
+);
  

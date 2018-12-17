@@ -6,10 +6,9 @@ import com.codecool.MKM.queststore.Model.User;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class StudentDAOpostgress extends DAO implements StudentDAO {
-
-
 
     public void addStudentToDataBase(Student student) {
         String quests = createStringFromArrayInt(student.getQuests());
@@ -66,7 +65,7 @@ public class StudentDAOpostgress extends DAO implements StudentDAO {
     }
 
     public void buyArtifactsWithOtherStudents(int studentId, int[] bougthGroupArtifacts) {
-        String query = "Update students SET classroom_artifacts=" + bougthGroupArtifacts + " where id=" + studentId + ";";
+        String query = "Update students SET classroom_artifacts=" + bougthGroupArtifacts + " where id='" + studentId + "';";
 
         Connection connection = this.openDataBase();
 
@@ -77,6 +76,17 @@ public class StudentDAOpostgress extends DAO implements StudentDAO {
     public List<Student> getStudentById(int studentId) {
         String query = "SELECT * FROM students WHERE id=" + studentId + ";";
         return getStudentsListFromDataBase(query);
+    }
+
+    @Override
+    public Optional<Student> getStudentByNickName(String name) {
+
+        String query = "SELECT * FROM students WHERE nickname='" + name + "';";
+
+        List<Student> studentsList = getStudentsListFromDataBase(query);
+        Optional<Student> student = Optional.ofNullable(studentsList.get(0));
+
+        return student;
     }
 
     public List<Student> getAllStudentsSortedByGroup() {
