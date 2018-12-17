@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Quest Store</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+	<link href="http://fonts.googleapis.com/css?family=Capriola" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="../static/store/css/questStore.css">
+
+</head>
+<body>
+	<div id="header-navbar">
+		<div id="bg-one"></div><div id="bg-two"></div><div id="bg-three"></div><div id="bg-four"></div>
+		<div id='cssmenu'>
+			<div id="menu-options">
+				<ul id="bar">
+				   <li class='active tab'><a href='#'><span>Artifacts</span></a></li>
+				   <li class='tab'><a href='/quest_store_quests'><span>Quests</span></a></li>
+				   <!--<li class='last tab'><a href='inventory.html'><span>Inventory</span></a></li>-->
+				</ul>
+			</div>
+			<div id="shop-name"><p>QUEST STORE</p></div>
+			<div id="my-progress">
+				<div id="my-bar-frame">
+			 		<div id="my-bar"><p id="coolcoins">{{ coolcoins }} cc</p></div>
+				</div>
+			</div>
+				<a id="profile-link" href="./student_profile"><img id="profile-pic" src="./static/images/{{ profilePicture }}"></a>
+			<div id="logOut">
+				<form method="POST">
+					<input type="submit" class="logOut" name="logOut" href="/login" value="Log Out"/>
+				</form>
+			</div>
+		</div>
+
+	</div>
+	<div id="container">
+		{% for category in categories %}
+		<div class="group">
+			<div class="group-title">
+				<ul>
+					<li class="arrow-down"><i class="fas fa-angle-double-down group-title-left-arrow"></i></li>
+					<li class="arrow-up"><i class="fas fa-angle-double-up group-title-left-arrow"></i></li>
+					<li><p class="category-name">{{ category }}</p></li>
+					<li class="arrow-down"><i class="fas fa-angle-double-down group-title-right-arrow"></i></li>
+					<li class="arrow-up"><i class="fas fa-angle-double-up group-title-right-arrow"></i></li>
+				</ul>
+			</div>
+			<div class="cards hide" class="row text-center">
+
+                <!--{% if isMentor %}-->
+                    <!--<div class="card" id="add-card">-->
+                        <!--<div class="thumbnail" style='background-image:url("../images/empty.jpeg")'>-->
+                            <!--<p class="coin">?</p>-->
+                            <!--<div class="caption"><h3>ADD NEW</h3></div>-->
+                            <!--<hr>-->
+                            <!--<div class="new-element"><a href="#"><i class="fas fa-plus"></i></a></div>-->
+                            <!--<div class="description">-->
+                                <!--<h6>Here is some text you can add</h6>-->
+                            <!--</div>-->
+                            <!--<div class="blur"></div>-->
+                            <!--<div class="blur2"></div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--{% endif %}-->
+
+				{% for card in cards %}
+				{%  if card.category == category %}
+					<div class="card">
+						{% for k,v in artifactPictures %}
+							{% if k == card.name %}
+								{% set card_img = v %}
+							{% endif %}
+						{% endfor %}
+
+						{% for k,v in artifactDescriptions %}
+							{% if k == card.name %}
+								{% set card_description = v %}
+							{% endif %}
+						{% endfor %}
+
+						<div class="thumbnail" style="background-image:url('./static/images/{{ card_img }}')">
+							{% set card_img = "" %}
+							<p class="coin">{{ card.price }}</p>
+							<div class="caption"><h3>{{card.name}}</h3></div>
+							<hr>
+							<div class="description">
+								<h6>{{card_description}}</h6>
+								{% set card_description = "" %}
+							</div>
+							<div class="blur"></div>
+							<div class="blur2"></div>
+						</div>
+					</div>
+				{% endif %}
+				{% endfor %}
+		    </div>
+		</div>
+		{% endfor %}
+	</div>
+<script type="text/javascript" src="../static/store/js/questStore.js"></script>
+</body>
+</html>
