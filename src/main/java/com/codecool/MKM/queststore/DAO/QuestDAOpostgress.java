@@ -22,9 +22,7 @@ public class QuestDAOpostgress extends DAO implements QuestDAO {
     public void addNewQuest(Item itemToAdd) {
         String query = "INSERT INTO quests VALUES(DEFAULT,'" + itemToAdd.getName() + "'," +
                 itemToAdd.getCategory() + "'," + itemToAdd.getPrice() + ");";
-
         Connection connection = this.openDataBase();
-
         editDataBase(connection, query);
     }
 
@@ -52,19 +50,20 @@ public class QuestDAOpostgress extends DAO implements QuestDAO {
     }
 
     public Item getQuestFromDataBase(String query){
+
         Item quest = null;
         try {
             Connection connection = this.openDataBase();
             PreparedStatement statement = connection.prepareStatement(query);
             ResultSet result = askDataBaseForData(query, statement);
-
             while (result.next()) {
                 quest = new Item(result.getInt("id"), result.getString("firstname"), result.getString("category"), result.getInt("price"));
             }
-
         } catch(SQLException e){
             e.printStackTrace();
         }
         return quest;
+
     }
+
 }

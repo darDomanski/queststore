@@ -23,6 +23,7 @@ public abstract class DAO {
         return c;
     }
 
+
     protected void closeStatementAndConnection(Connection connection, Statement statement) {
         try{
             connection.close();
