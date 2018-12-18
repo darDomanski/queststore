@@ -1,5 +1,7 @@
 package com.codecool.MKM.queststore.DAO;
 
+import com.codecool.MKM.queststore.DAO.DBConnector.DBConnector;
+
 import javax.xml.transform.Result;
 import java.sql.*;
 import java.util.ArrayList;
@@ -10,7 +12,9 @@ public class LoginDAOpostgress extends DAO implements LoginDAO {
 
     private String getUsersQuery = "SELECT * FROM login;";
 
-
+    public LoginDAOpostgress(DBConnector connector) {
+        super(connector);
+    }
 
 
     public List<List<String>> getUsersListFromDataBase() {

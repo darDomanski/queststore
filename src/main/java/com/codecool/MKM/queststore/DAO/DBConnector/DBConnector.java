@@ -12,9 +12,9 @@ public final class DBConnector {
 
     private DBConnector(){
         this.dataSource = new BasicDataSource();
-        dataSource.setUrl("jdbc:postgresql://localhost:5432/quest_store");
-        dataSource.setUsername("admin");
-        dataSource.setPassword("admin");
+        dataSource.setUrl("jdbc:postgresql://localhost:5432/questStore");
+        dataSource.setUsername("postgres");
+        dataSource.setPassword("test");
         dataSource.setMinIdle(5);
         dataSource.setMaxIdle(100);
         dataSource.setMaxWaitMillis(2000);
