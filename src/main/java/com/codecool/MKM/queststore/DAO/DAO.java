@@ -1,5 +1,6 @@
 package com.codecool.MKM.queststore.DAO;
 
+import com.codecool.MKM.queststore.DAO.DBConnector.DBConnector;
 import com.codecool.MKM.queststore.Model.Item;
 
 import java.sql.*;
@@ -8,12 +9,16 @@ import java.util.List;
 
 public abstract class DAO {
 
+    private DBConnector connector;
+
+    public DAO(DBConnector connector) {
+        this.connector = connector;
+    }
+
     public Connection openDataBase() {
         Connection c = null;
         try {
-            c = DriverManager
-                    .getConnection("jdbc:postgresql://localhost:5432/QuestStore",
-                            "postgres", "test");
+            c = connector.getConnection();
         } catch (Exception e) {
             e.printStackTrace();
             System.err.println(e.getClass().getName()+": "+e.getMessage());
@@ -22,7 +27,6 @@ public abstract class DAO {
         System.out.println("Opened database successfully");
         return c;
     }
-
 
     protected void closeStatementAndConnection(Connection connection, Statement statement) {
         try{
