@@ -29,20 +29,18 @@ public class questStoreQuests implements HttpHandler {
     SessionController session = new BasicSessionController();
     StoreController questStore = new BasicStoreController();
     StudentController studentController = new BasicStudentController();
+    ParseData parseData = new ParseData();
+
     @Override
     public void handle(HttpExchange httpExchange) throws IOException {
         String response = "";
         String method = httpExchange.getRequestMethod();
-
         Optional<HttpCookie> cookie = cookieHelper.getSessionIdCookie(httpExchange, SESSION_COOKIE_NAME);
 
-
         String sessionId = "fakeid";
-
         if(cookie.isPresent()){
             sessionId = cookie.get().getValue().replace("\"", "");
         }
-
         JtwigTemplate template;
         JtwigModel model = JtwigModel.newModel();
 
@@ -77,16 +75,14 @@ public class questStoreQuests implements HttpHandler {
 
         }
         if(method.equals("POST")) {
-            System.out.println("guxik dziasl");
+//            System.out.println("guxik dziasl");
             InputStreamReader isr = new InputStreamReader(httpExchange.getRequestBody(), "utf-8");
             BufferedReader br = new BufferedReader(isr);
             String formData = br.readLine();
-            Map inputs = parseFormData(formData);
+            Map inputs = parseData.parseFormData(formData);
 
             if (inputs.containsKey("logOut")) {
-
                 SessionDAOpostgress dao = new SessionDAOpostgress();
-
                 dao.deleteSession(sessionId);
             }
             httpExchange.getResponseHeaders().add("Location", "/login");
@@ -98,18 +94,17 @@ public class questStoreQuests implements HttpHandler {
         os.close();
     }
 
-
-    public Map<String, String> parseFormData(String formData) throws UnsupportedEncodingException {
-        Map<String, String> map = new HashMap<String, String>();
-        String[] pairs = formData.split("&");
-        for(String pair : pairs){
-            String[] keyValue = pair.split("=");
-            // We have to decode the value because it's urlencoded. see: https://en.wikipedia.org/wiki/POST_(HTTP)#Use_for_submitting_web_forms
-            String value = new URLDecoder().decode(keyValue[1], "UTF-8");
-            map.put(keyValue[0], value);
-        }
-        return map;
-    }
+//    public Map<String, String> parseFormData(String formData) throws UnsupportedEncodingException {
+//        Map<String, String> map = new HashMap<String, String>();
+//        String[] pairs = formData.split("&");
+//        for(String pair : pairs){
+//            String[] keyValue = pair.split("=");
+//            // We have to decode the value because it's urlencoded. see: https://en.wikipedia.org/wiki/POST_(HTTP)#Use_for_submitting_web_forms
+//            String value = new URLDecoder().decode(keyValue[1], "UTF-8");
+//            map.put(keyValue[0], value);
+//        }
+//        return map;
+//    }
 
 }
 
