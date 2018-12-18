@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
-public class questStore implements HttpHandler {
+public class QuestStore implements HttpHandler {
     private final String SESSION_COOKIE_NAME = "sessionId";
     CookieHelper cookieHelper = new CookieHelper();
     SessionController session = new BasicSessionController();
@@ -63,7 +63,7 @@ public class questStore implements HttpHandler {
                 model.with("profilePicture", profilePicture);
                 model.with("coolcoins", coolcoins);
 
-                template = JtwigTemplate.classpathTemplate("templates/store/questStore.twig");
+                template = JtwigTemplate.classpathTemplate("templates/store/QuestStore.twig");
                 response = template.render(model);
                 httpExchange.sendResponseHeaders(303, 0);
             } else {

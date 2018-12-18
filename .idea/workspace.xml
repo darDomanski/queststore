@@ -2,61 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d53a4c5-82c7-4759-a937-24faa397e050" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/ParseData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/codecool/MKM/queststore/ParseDataTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/codecool/MKM/queststore/questStoreQuestsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/queststore.iml" beforeDir="false" afterPath="$PROJECT_DIR$/queststore.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/questStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/questStore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/questStoreQuests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/questStoreQuests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/queststore.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/Controller/BasicCreepyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/Controller/BasicCreepyController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/Controller/BasicLoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/Controller/BasicLoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/Controller/BasicMentorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/Controller/BasicMentorController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/Controller/BasicSessionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/Controller/BasicSessionController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/Controller/BasicStoreController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/Controller/BasicStoreController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/DAO/ArtifactsSingleDAOpostgress.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/DAO/ArtifactsSingleDAOpostgress.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/DAO/DAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/DAO/DAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/DAO/LoginDAOpostgress.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/DAO/LoginDAOpostgress.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/DAO/MediaDaoPostgress.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/DAO/MediaDaoPostgress.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/DAO/MentorDAOpostgress.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/DAO/MentorDAOpostgress.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/DAO/QuestDAOpostgress.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/DAO/QuestDAOpostgress.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/DAO/SessionDAOpostgress.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/DAO/SessionDAOpostgress.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/DAO/StudentDAOpostgress.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/DAO/StudentDAOpostgress.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/Helpers/CookieHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/Helpers/CookieHelper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/Helpers/MimeTypes$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/Helpers/MimeTypes$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/Helpers/MimeTypes.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/Helpers/MimeTypes.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/Login.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/Static.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/Static.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/View/Viewer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/View/Viewer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/questStore.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/questStore.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/questStoreQuests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/MKM/queststore/questStoreQuests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/adam-connor.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/bg-blog-card.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/empty.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/student1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/trees.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/managmentSystem/scripts/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/managmentSystem/styles/creepy.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/managmentSystem/styles/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/store/css/questStore.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/store/js/questStore.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/managmentSystem/add_new.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/managmentSystem/creepy.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/managmentSystem/edit.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/managmentSystem/groups.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/managmentSystem/mentor.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/managmentSystem/student_profile.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/store/inventory.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/store/mentorView.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/store/questStore.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/store/quests.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/DAO/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/DAO/DAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/questStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/QuestStore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/questStoreQuests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/QuestStoreQuests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/codecool/MKM/queststore/questStoreQuestsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/codecool/MKM/queststore/questStoreQuestsTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -66,14 +17,26 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.52918285">
+    <splitter split-orientation="horizontal" split-proportion="0.4622871">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/questStoreQuests.java">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/QuestStoreQuests.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="119">
-                  <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+                <state relative-caret-position="408">
+                  <caret line="44" column="3" selection-start-line="44" selection-start-column="3" selection-end-line="44" selection-end-column="3" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/test/java/com/codecool/MKM/queststore/questStoreQuestsTest.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="306">
+                  <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -81,15 +44,21 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/test/java/com/codecool/MKM/queststore/questStoreQuestsTest.java">
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/Controller/SessionController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="408">
-                  <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
+                <state relative-caret-position="136">
+                  <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/Controller/BasicSessionController.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="357">
+                  <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
                 </state>
               </provider>
             </entry>
@@ -117,6 +86,7 @@
         <option value="$PROJECT_DIR$/src/test/java/com/codecool/MKM/queststore/ParseDataTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/questStoreQuests.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/QuestStoreQuests.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/codecool/MKM/queststore/questStoreQuestsTest.java" />
       </list>
     </option>
@@ -164,6 +134,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="queststore" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="queststore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="queststore" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="queststore" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="queststore" type="b2602c69:ProjectViewProjectNode" />
@@ -285,7 +264,7 @@
     <frame x="39" y="-4" width="1327" height="772" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.14241245" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.040466927" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -294,7 +273,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="DB Browser" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32874617" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.25688073" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -316,20 +295,10 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/questStore.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/QuestStore.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="283">
           <caret line="97" selection-start-line="97" selection-end-line="107" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/ParseData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="44" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -357,20 +326,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/questStoreQuests.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/ParseData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="31" lean-forward="true" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/Controller/BasicMentorController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/Controller/BasicLoginController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/Controller/BasicStoreController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/Controller/BasicStudentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="11" column="65" lean-forward="true" selection-start-line="11" selection-start-column="65" selection-end-line="11" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/Controller/BasicCreepyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/Controller/SessionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/Controller/BasicSessionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/codecool/MKM/queststore/questStoreQuestsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+        <state relative-caret-position="306">
+          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MKM/queststore/QuestStoreQuests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="44" column="3" selection-start-line="44" selection-start-column="3" selection-end-line="44" selection-end-column="3" />
         </state>
       </provider>
     </entry>
