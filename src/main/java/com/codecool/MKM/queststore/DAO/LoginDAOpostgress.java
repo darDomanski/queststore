@@ -22,19 +22,12 @@ public class LoginDAOpostgress extends DAO implements LoginDAO {
         ResultSet result = null;
         PreparedStatement statement = null;
 
-        String query = getUsersQuery;
-
-        try {
-            statement = connection.prepareStatement(query);
-
-            result = askDataBaseForData(getUsersQuery, statement);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
         List<List<String>> usersList = new ArrayList<List<String>>();
 
         try {
+            statement = connection.prepareStatement(getUsersQuery);
+            result = askDataBaseForData(getUsersQuery, statement);
+
             while (result.next()) {
                 List<String> recordsPropertiesList = new ArrayList<String>();
 
@@ -46,7 +39,9 @@ public class LoginDAOpostgress extends DAO implements LoginDAO {
         }catch (SQLException e) {
             e.printStackTrace();
         }
+
         closeStatementAndConnection(connection,statement);
+
         return usersList;
     }
 
