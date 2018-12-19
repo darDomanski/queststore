@@ -1,5 +1,6 @@
 package com.codecool.MKM.queststore.Controller;
 
+import com.codecool.MKM.queststore.DAO.DBConnector.DBConnector;
 import com.codecool.MKM.queststore.DAO.StudentDAO;
 import com.codecool.MKM.queststore.DAO.StudentDAOpostgress;
 import com.codecool.MKM.queststore.Model.Student;
@@ -13,10 +14,12 @@ public class BasicMentorController implements MentorController {
 
     Viewer view;
     StudentDAO studentDAO;
+    DBConnector connector;
 
-    public BasicMentorController() {
+    public BasicMentorController(DBConnector connector) {
+        this.connector = connector;
         this.view = new Viewer();
-        this.studentDAO = new StudentDAOpostgress();
+        this.studentDAO = new StudentDAOpostgress(connector);
     }
 
     public void createStudent() {

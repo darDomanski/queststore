@@ -18,10 +18,11 @@ import java.util.List;
 
 public class QuestDAOpostgress extends DAO implements QuestDAO {
 
-    StudentDAO student = new StudentDAOpostgress();
+    StudentDAO student;
 
     public QuestDAOpostgress(DBConnector connector) {
         super(connector);
+        student = new StudentDAOpostgress(connector);
     }
 
     public void addNewQuest(Item itemToAdd) {

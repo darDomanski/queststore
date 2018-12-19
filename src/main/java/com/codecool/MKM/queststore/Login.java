@@ -4,6 +4,7 @@ import com.codecool.MKM.queststore.Controller.BasicLoginController;
 import com.codecool.MKM.queststore.Controller.BasicSessionController;
 import com.codecool.MKM.queststore.Controller.LoginController;
 import com.codecool.MKM.queststore.Controller.SessionController;
+import com.codecool.MKM.queststore.DAO.DBConnector.DBConnector;
 import com.codecool.MKM.queststore.Helpers.CookieHelper;
 import com.codecool.MKM.queststore.Helpers.SessionIdGenerator;
 import com.sun.net.httpserver.HttpExchange;
@@ -23,9 +24,17 @@ public class Login implements HttpHandler {
 
     private final String SESSION_COOKIE_NAME = "sessionId";
     CookieHelper cookieHelper = new CookieHelper();
-    SessionController session = new BasicSessionController();
-    LoginController loginController = new BasicLoginController();
-    SessionIdGenerator sessionIdGenerator = new SessionIdGenerator();
+    SessionController session;
+    LoginController loginController;
+    SessionIdGenerator sessionIdGenerator;
+    private DBConnector connector;
+
+    public Login(DBConnector connector) {
+        this.connector = connector;
+        this.session = new BasicSessionController(this.connector);
+        this.loginController = new BasicLoginController(this.connector);
+        this.sessionIdGenerator = new SessionIdGenerator();
+    }
 
     public void handle(HttpExchange httpExchange) throws IOException {
         String response = "";

@@ -12,10 +12,11 @@ import java.util.List;
 
 public class ArtifactsSingleDAOpostgress extends DAO implements ArtifactsSingleDAO {
 
-    StudentDAO student = new StudentDAOpostgress();
+    StudentDAO student;
 
     public ArtifactsSingleDAOpostgress(DBConnector connector) {
         super(connector);
+        student =  new StudentDAOpostgress(connector);
     }
 
     public void addNewArtifact(Item itemToAdd) {
