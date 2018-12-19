@@ -1,12 +1,17 @@
 package com.codecool.MKM.queststore.DAO;
 
 import com.codecool.MKM.queststore.Controller.MediaDao;
+import com.codecool.MKM.queststore.DAO.DBConnector.DBConnector;
 
 import java.sql.*;
 import java.util.HashMap;
 import java.util.Map;
 
 public class MediaDaoPostgress extends DAO implements MediaDao {
+
+    public MediaDaoPostgress(DBConnector connector) {
+        super(connector);
+    }
 
     public Map<String,String> getMedia(String mediaTableName) {
 

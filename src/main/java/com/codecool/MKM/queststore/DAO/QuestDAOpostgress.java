@@ -1,5 +1,6 @@
 package com.codecool.MKM.queststore.DAO;
 
+import com.codecool.MKM.queststore.DAO.DBConnector.DBConnector;
 import com.codecool.MKM.queststore.Model.Item;
 import com.codecool.MKM.queststore.DAO.StudentDAO;
 import com.codecool.MKM.queststore.DAO.StudentDAOpostgress;
@@ -18,6 +19,10 @@ import java.util.List;
 public class QuestDAOpostgress extends DAO implements QuestDAO {
 
     StudentDAO student = new StudentDAOpostgress();
+
+    public QuestDAOpostgress(DBConnector connector) {
+        super(connector);
+    }
 
     public void addNewQuest(Item itemToAdd) {
         String query = "INSERT INTO quests VALUES(DEFAULT,'" + itemToAdd.getName() + "'," +
