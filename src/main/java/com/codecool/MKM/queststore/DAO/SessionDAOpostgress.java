@@ -1,5 +1,6 @@
 package com.codecool.MKM.queststore.DAO;
 
+import com.codecool.MKM.queststore.DAO.DBConnector.DBConnector;
 import com.codecool.MKM.queststore.Model.Session;
 
 import java.sql.Connection;
@@ -9,7 +10,14 @@ import java.sql.SQLException;
 import java.util.Optional;
 
 public class SessionDAOpostgress extends DAO implements SessionDAO{
-    public void addNewSession(String login, String sessionID,  String userType) {
+
+
+    public SessionDAOpostgress(DBConnector connector) {
+        super(connector);
+    }
+
+
+    public void addNewSession(String login, String sessionID, String userType) {
         String query = "INSERT INTO active_sessions (sessionid, userlogin, usertype) " +
                 "VALUES('" + sessionID + "', '" + login + "', '" + userType +"');";
         executeQuery(query);

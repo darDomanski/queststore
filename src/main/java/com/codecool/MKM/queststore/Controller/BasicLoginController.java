@@ -1,5 +1,6 @@
 package com.codecool.MKM.queststore.Controller;
 
+import com.codecool.MKM.queststore.DAO.DBConnector.DBConnector;
 import com.codecool.MKM.queststore.DAO.LoginDAO;
 import com.codecool.MKM.queststore.DAO.LoginDAOpostgress;
 
@@ -7,7 +8,8 @@ import java.util.List;
 
 public class BasicLoginController implements LoginController {
 
-    LoginDAO loginDAO = new LoginDAOpostgress();
+    private DBConnector connector;
+    LoginDAO loginDAO = new LoginDAOpostgress(connector);
 
     @Override
     public String getUserType(String login) {

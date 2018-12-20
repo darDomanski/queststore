@@ -1,5 +1,6 @@
 package com.codecool.MKM.queststore.Controller;
 
+import com.codecool.MKM.queststore.DAO.DBConnector.DBConnector;
 import com.codecool.MKM.queststore.DAO.StudentDAO;
 import com.codecool.MKM.queststore.DAO.StudentDAOpostgress;
 import com.codecool.MKM.queststore.Model.Student;
@@ -12,9 +13,10 @@ import java.util.Optional;
 public class BasicStudentController implements StudentController{
 
     private StudentDAO studentDAO;
+    private DBConnector connector;
 
     public BasicStudentController(){
-        this.studentDAO = new StudentDAOpostgress();
+        this.studentDAO = new StudentDAOpostgress(connector);
     }
 
 

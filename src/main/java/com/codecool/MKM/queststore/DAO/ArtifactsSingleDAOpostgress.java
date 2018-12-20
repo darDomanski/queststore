@@ -1,5 +1,6 @@
 package com.codecool.MKM.queststore.DAO;
 
+import com.codecool.MKM.queststore.DAO.DBConnector.DBConnector;
 import com.codecool.MKM.queststore.Model.ArtifactGroups;
 import com.codecool.MKM.queststore.Model.Item;
 import com.codecool.MKM.queststore.Model.StoreItems;
@@ -11,7 +12,12 @@ import java.util.List;
 
 public class ArtifactsSingleDAOpostgress extends DAO implements ArtifactsSingleDAO {
 
-    StudentDAO student = new StudentDAOpostgress();
+    private DBConnector connector;
+    StudentDAO student = new StudentDAOpostgress(connector);
+
+    public ArtifactsSingleDAOpostgress(DBConnector connector) {
+        super(connector);
+    }
 
     public void addNewArtifact(Item itemToAdd) {
         String query = "INSERT INTO artifacts VALUES(DEFAULT,'" + itemToAdd.getName() + "'," +

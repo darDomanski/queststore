@@ -1,5 +1,6 @@
 package com.codecool.MKM.queststore.Controller;
 
+import com.codecool.MKM.queststore.DAO.DBConnector.DBConnector;
 import com.codecool.MKM.queststore.DAO.MentorDAO;
 import com.codecool.MKM.queststore.DAO.MentorDAOpostgress;
 import com.codecool.MKM.queststore.Model.Mentor;
@@ -14,10 +15,11 @@ public class BasicCreepyController implements CreepyController {
     Viewer view;
     MentorDAO dao;
 
+    DBConnector connector;
 
     public BasicCreepyController() {
         view = new Viewer();
-        dao = new MentorDAOpostgress();
+        dao = new MentorDAOpostgress(connector);
     }
 
 

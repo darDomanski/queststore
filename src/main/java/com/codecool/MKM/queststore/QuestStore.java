@@ -1,6 +1,7 @@
 package com.codecool.MKM.queststore;
 
 import com.codecool.MKM.queststore.Controller.*;
+import com.codecool.MKM.queststore.DAO.DBConnector.DBConnector;
 import com.codecool.MKM.queststore.Helpers.CookieHelper;
 import com.codecool.MKM.queststore.Model.Item;
 import com.codecool.MKM.queststore.Model.Student;
@@ -19,11 +20,14 @@ import java.util.Map;
 import java.util.Optional;
 
 public class QuestStore implements HttpHandler {
+
+    DBConnector connector;
     private final String SESSION_COOKIE_NAME = "sessionId";
     CookieHelper cookieHelper = new CookieHelper();
     SessionController session = new BasicSessionController();
     StoreController questStore = new BasicStoreController();
     StudentController studentController = new BasicStudentController();
+
     @Override
     public void handle(HttpExchange httpExchange) throws IOException {
         String response = "";
@@ -80,7 +84,7 @@ public class QuestStore implements HttpHandler {
             System.out.println("guzik dziala");
             if (inputs.containsKey("logOut")) {
 
-               SessionDAOpostgress dao = new SessionDAOpostgress();
+               SessionDAOpostgress dao = new SessionDAOpostgress(connector);
 
                dao.deleteSession(sessionId);
 

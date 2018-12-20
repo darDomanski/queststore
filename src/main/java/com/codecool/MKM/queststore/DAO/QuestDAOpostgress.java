@@ -1,9 +1,7 @@
 package com.codecool.MKM.queststore.DAO;
 
+import com.codecool.MKM.queststore.DAO.DBConnector.DBConnector;
 import com.codecool.MKM.queststore.Model.Item;
-import com.codecool.MKM.queststore.DAO.StudentDAO;
-import com.codecool.MKM.queststore.DAO.StudentDAOpostgress;
-import com.codecool.MKM.queststore.Model.User;
 import com.codecool.MKM.queststore.Model.Student;
 
 
@@ -11,13 +9,21 @@ import java.sql.*;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class QuestDAOpostgress extends DAO implements QuestDAO {
 
-    StudentDAO student = new StudentDAOpostgress();
+    DBConnector connector;
+    StudentDAO studentDAO;
+
+
+    public QuestDAOpostgress(DBConnector connector) {
+
+        super(connector);
+        studentDAO = new StudentDAOpostgress(connector);
+    }
 
     public void addNewQuest(Item itemToAdd) {
         String query = "INSERT INTO quests VALUES(DEFAULT,'" + itemToAdd.getName() + "'," +
@@ -32,7 +38,7 @@ public class QuestDAOpostgress extends DAO implements QuestDAO {
     }
 
     public ArrayList<Item> getUserQuests(int userId){
-        List<Student> studentById = student.getStudentById(userId);
+        List<Student> studentById = studentDAO.getStudentById(userId);
         Student studentModel = studentById.get(0);
         int[] studentQuestsId = studentModel.getQuests();
         return getQuestsById(studentQuestsId);
@@ -45,6 +51,7 @@ public class QuestDAOpostgress extends DAO implements QuestDAO {
             String query = "SELECT * FROM quests WHERE id=" + questsId[i] + ";";
             Item quest = getQuestFromDataBase(query);
             questsList.add(quest);
+            System.out.println("tutaj : "+i);
         }
         return questsList;
     }
@@ -62,6 +69,7 @@ public class QuestDAOpostgress extends DAO implements QuestDAO {
         } catch(SQLException e){
             e.printStackTrace();
         }
+
         return quest;
 
     }

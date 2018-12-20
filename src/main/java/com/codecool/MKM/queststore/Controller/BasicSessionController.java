@@ -1,5 +1,6 @@
 package com.codecool.MKM.queststore.Controller;
 
+import com.codecool.MKM.queststore.DAO.DBConnector.DBConnector;
 import com.codecool.MKM.queststore.DAO.SessionDAO;
 import com.codecool.MKM.queststore.DAO.SessionDAOpostgress;
 import com.codecool.MKM.queststore.Model.Session;
@@ -7,7 +8,10 @@ import com.codecool.MKM.queststore.Model.Session;
 import java.util.Optional;
 
 public class BasicSessionController implements SessionController{
-    SessionDAO sessionDAO = new SessionDAOpostgress();
+
+    private DBConnector connector;
+
+    SessionDAO sessionDAO = new SessionDAOpostgress(connector);
     @Override
     public void addNewSessionToDB(String login, String sessionID,  String userType){
             sessionDAO.addNewSession(login, sessionID, userType);

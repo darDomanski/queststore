@@ -1,5 +1,6 @@
 package com.codecool.MKM.queststore.DAO;
 
+import com.codecool.MKM.queststore.DAO.DBConnector.DBConnector;
 import com.codecool.MKM.queststore.Model.Mentor;
 import com.codecool.MKM.queststore.Model.User;
 
@@ -8,6 +9,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MentorDAOpostgress extends DAO implements MentorDAO {
+
+    public MentorDAOpostgress(DBConnector connector) {
+        super(connector);
+    }
 
     public List<User> getAllMentors() {
         String query = "select * from mentors;";

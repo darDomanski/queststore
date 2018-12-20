@@ -1,5 +1,6 @@
 package com.codecool.MKM.queststore.DAO;
 
+import com.codecool.MKM.queststore.DAO.DBConnector.DBConnector;
 import com.codecool.MKM.queststore.Model.Student;
 import com.codecool.MKM.queststore.Model.User;
 
@@ -9,6 +10,11 @@ import java.util.List;
 import java.util.Optional;
 
 public class StudentDAOpostgress extends DAO implements StudentDAO {
+
+    public StudentDAOpostgress(DBConnector connector) {
+        super(connector);
+    }
+
 
     public void addStudentToDataBase(Student student) {
         String quests = createStringFromArrayInt(student.getQuests());
@@ -96,7 +102,7 @@ public class StudentDAOpostgress extends DAO implements StudentDAO {
     }
 
 
-    private List<Student> getStudentsListFromDataBase(String query) {
+    public List<Student> getStudentsListFromDataBase(String query) {
 
         Connection connection = this.openDataBase();
 

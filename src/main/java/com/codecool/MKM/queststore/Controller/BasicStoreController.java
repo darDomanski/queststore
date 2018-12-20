@@ -1,6 +1,7 @@
 package com.codecool.MKM.queststore.Controller;
 
 import com.codecool.MKM.queststore.DAO.*;
+import com.codecool.MKM.queststore.DAO.DBConnector.DBConnector;
 import com.codecool.MKM.queststore.Model.Item;
 import com.codecool.MKM.queststore.View.Viewer;
 
@@ -16,10 +17,13 @@ public class BasicStoreController implements StoreController {
     MediaDaoPostgress mediaDao;
 
     public BasicStoreController() {
+
+        DBConnector connector = DBConnector.getInstance();
+
         view = new Viewer();
-        quest = new QuestDAOpostgress();
-        artifacts = new ArtifactsSingleDAOpostgress();
-        mediaDao = new MediaDaoPostgress();
+        quest = new QuestDAOpostgress(connector);
+        artifacts = new ArtifactsSingleDAOpostgress(connector);
+        mediaDao = new MediaDaoPostgress(connector);
     }
 
     public List<Item> getAllQuests(){
