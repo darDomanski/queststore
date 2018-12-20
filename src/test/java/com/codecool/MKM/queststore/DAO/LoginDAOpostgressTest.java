@@ -15,8 +15,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Matchers.anyString;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 class LoginDAOpostgressTest {
     private LoginDAOpostgress loginDAOpostgress;
@@ -42,7 +41,7 @@ class LoginDAOpostgressTest {
     public void testGetUsersListFromDataBase() throws SQLException {
         when(dbConnector.getConnection()).thenReturn(connection);
         when(connection.prepareStatement(anyString())).thenReturn(preparedStatement);
-        when(loginDAOpostgress.askDataBaseForData(query, preparedStatement)).thenReturn(resultSet);
+        when(preparedStatement.executeQuery()).thenReturn(resultSet);
         when(resultSet.next()).thenReturn(true, false);
         when(resultSet.getString(1)).thenReturn("test");
         when(resultSet.getString(2)).thenReturn("test");
@@ -56,5 +55,14 @@ class LoginDAOpostgressTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    public void testRemoveUserFromDataBaseByLogin() throws SQLException {
+        when(dbConnector.getConnection()).thenReturn(connection);
+        when(connection.prepareStatement(anyString())).thenReturn(preparedStatement);
+
+        loginDAOpostgress.removeUserFromDataBaseByLogin("test");
+
+        verify(preparedStatement).executeQuery();
+    }
 
 }
