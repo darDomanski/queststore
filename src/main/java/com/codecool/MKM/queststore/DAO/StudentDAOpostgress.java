@@ -15,7 +15,6 @@ public class StudentDAOpostgress extends DAO implements StudentDAO {
         super(connector);
     }
 
-
     public void addStudentToDataBase(Student student) {
         String quests = createStringFromArrayInt(student.getQuests());
         String artifacts = createStringFromArrayInt(student.getArtifacts());
@@ -102,7 +101,7 @@ public class StudentDAOpostgress extends DAO implements StudentDAO {
     }
 
 
-    public List<Student> getStudentsListFromDataBase(String query) {
+    private List<Student> getStudentsListFromDataBase(String query) {
 
         Connection connection = this.openDataBase();
 

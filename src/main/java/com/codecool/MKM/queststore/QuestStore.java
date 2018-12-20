@@ -20,13 +20,20 @@ import java.util.Map;
 import java.util.Optional;
 
 public class QuestStore implements HttpHandler {
-
-    DBConnector connector;
     private final String SESSION_COOKIE_NAME = "sessionId";
     CookieHelper cookieHelper = new CookieHelper();
-    SessionController session = new BasicSessionController();
-    StoreController questStore = new BasicStoreController();
-    StudentController studentController = new BasicStudentController();
+    SessionController session;
+    StoreController questStore;
+    StudentController studentController;
+    private DBConnector connector;
+
+    public QuestStore(DBConnector connector) {
+        this.connector = connector;
+        this.session = new BasicSessionController(this.connector);
+        this.questStore = new BasicStoreController(this.connector);
+        this.studentController = new BasicStudentController(this.connector);
+    }
+
 
     @Override
     public void handle(HttpExchange httpExchange) throws IOException {
@@ -67,7 +74,7 @@ public class QuestStore implements HttpHandler {
                 model.with("profilePicture", profilePicture);
                 model.with("coolcoins", coolcoins);
 
-                template = JtwigTemplate.classpathTemplate("templates/store/QuestStore.twig");
+                template = JtwigTemplate.classpathTemplate("templates/store/questStore.twig");
                 response = template.render(model);
                 httpExchange.sendResponseHeaders(303, 0);
             } else {
@@ -110,5 +117,4 @@ public class QuestStore implements HttpHandler {
         }
         return map;
     }
-
 }

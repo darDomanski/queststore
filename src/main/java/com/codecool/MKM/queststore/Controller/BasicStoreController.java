@@ -16,10 +16,7 @@ public class BasicStoreController implements StoreController {
     ArtifactsSingleDAO artifacts;
     MediaDaoPostgress mediaDao;
 
-    public BasicStoreController() {
-
-        DBConnector connector = DBConnector.getInstance();
-
+    public BasicStoreController(DBConnector connector) {
         view = new Viewer();
         quest = new QuestDAOpostgress(connector);
         artifacts = new ArtifactsSingleDAOpostgress(connector);

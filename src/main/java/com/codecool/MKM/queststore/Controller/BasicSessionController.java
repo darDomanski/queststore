@@ -9,9 +9,14 @@ import java.util.Optional;
 
 public class BasicSessionController implements SessionController{
 
-    private DBConnector connector;
+    SessionDAO sessionDAO;
+    DBConnector connector;
 
-    SessionDAO sessionDAO = new SessionDAOpostgress(connector);
+    public BasicSessionController(DBConnector connector) {
+        this.connector = connector;
+        this.sessionDAO =  new SessionDAOpostgress(connector);
+    }
+
     @Override
     public void addNewSessionToDB(String login, String sessionID,  String userType){
             sessionDAO.addNewSession(login, sessionID, userType);

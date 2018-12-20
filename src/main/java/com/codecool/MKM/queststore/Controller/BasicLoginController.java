@@ -8,8 +8,13 @@ import java.util.List;
 
 public class BasicLoginController implements LoginController {
 
-    private DBConnector connector;
-    LoginDAO loginDAO = new LoginDAOpostgress(connector);
+    LoginDAO loginDAO;
+    DBConnector connector;
+
+    public BasicLoginController(DBConnector connector) {
+        this.connector = connector;
+        this.loginDAO = new LoginDAOpostgress(connector);
+    }
 
     @Override
     public String getUserType(String login) {

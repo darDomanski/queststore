@@ -14,12 +14,12 @@ public class BasicCreepyController implements CreepyController {
 
     Viewer view;
     MentorDAO dao;
-
     DBConnector connector;
 
-    public BasicCreepyController() {
-        view = new Viewer();
-        dao = new MentorDAOpostgress(connector);
+    public BasicCreepyController(DBConnector connector) {
+        this.connector = connector;
+        this.view = new Viewer();
+        this.dao = new MentorDAOpostgress(connector);
     }
 
 

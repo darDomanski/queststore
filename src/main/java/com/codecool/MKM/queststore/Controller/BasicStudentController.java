@@ -5,6 +5,7 @@ import com.codecool.MKM.queststore.DAO.StudentDAO;
 import com.codecool.MKM.queststore.DAO.StudentDAOpostgress;
 import com.codecool.MKM.queststore.Model.Student;
 import com.codecool.MKM.queststore.Model.User;
+import sun.security.pkcs11.Secmod;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +16,8 @@ public class BasicStudentController implements StudentController{
     private StudentDAO studentDAO;
     private DBConnector connector;
 
-    public BasicStudentController(){
+    public BasicStudentController(DBConnector connector){
+        this.connector = connector;
         this.studentDAO = new StudentDAOpostgress(connector);
     }
 

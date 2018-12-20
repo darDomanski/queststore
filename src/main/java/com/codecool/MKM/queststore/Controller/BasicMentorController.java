@@ -14,10 +14,10 @@ public class BasicMentorController implements MentorController {
 
     Viewer view;
     StudentDAO studentDAO;
-    private DBConnector connector;
+    DBConnector connector;
 
-
-    public BasicMentorController() {
+    public BasicMentorController(DBConnector connector) {
+        this.connector = connector;
         this.view = new Viewer();
         this.studentDAO = new StudentDAOpostgress(connector);
     }

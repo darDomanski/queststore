@@ -10,12 +10,9 @@ import java.sql.SQLException;
 import java.util.Optional;
 
 public class SessionDAOpostgress extends DAO implements SessionDAO{
-
-
     public SessionDAOpostgress(DBConnector connector) {
         super(connector);
     }
-
 
     public void addNewSession(String login, String sessionID, String userType) {
         String query = "INSERT INTO active_sessions (sessionid, userlogin, usertype) " +
