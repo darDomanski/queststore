@@ -55,7 +55,6 @@ class QuestDAOpostgressTest {
         item22 = mock(Item.class);
         dao =mock(DAO.class);
         studentById = mock(ArrayList.class);
-
     }
 
 
@@ -111,7 +110,6 @@ class QuestDAOpostgressTest {
 //        doReturn(tempitem).when(questDAOpostgress).getQuestFromDataBase(query2);
 
         List<Item> itemsTests =  questDAOpostgress.getQuestsById( questsId );
-        System.out.println("rozmiar : "+itemsTests.size());
 
         assertEquals( itemsTemp.size() , itemsTests.size());
     }
@@ -189,14 +187,12 @@ class QuestDAOpostgressTest {
         when(resultSet.getInt("price")).thenReturn(11);
 
         List<Item> itemsTests =  questDAOpostgress.getAllQuests();
-        System.out.println("rozmiar : "+itemsTests.size());
 
         assertEquals( itemsTemp.size() , itemsTests.size());
     }
 
     @Test
     public void  addNewQuest() throws SQLException{
-
 
         Item quest01 = mock(Item.class);
 
@@ -208,5 +204,4 @@ class QuestDAOpostgressTest {
         verify( questDAOpostgress).editDataBase(anyObject(),anyString());
 
     }
-
 }

@@ -25,20 +25,20 @@ import java.util.Optional;
 
 public class QuestStoreQuests implements HttpHandler {
 
-
-
     private final String SESSION_COOKIE_NAME = "sessionId";
     CookieHelper cookieHelper = new CookieHelper();
     SessionController session = new BasicSessionController();
     StoreController questStore = new BasicStoreController();
     StudentController studentController = new BasicStudentController();
     ParseData parseData = new ParseData();
-    DBConnector connector = DBConnector.getInstance();
+    DBConnector connector;
 
+    public QuestStoreQuests ( DBConnector connector ) {
+        this. connector = connector;
+    }
 
     @Override
     public void handle(HttpExchange httpExchange) throws IOException {
-
 
         String response = "";
         String method = httpExchange.getRequestMethod();

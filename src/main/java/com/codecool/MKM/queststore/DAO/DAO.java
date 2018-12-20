@@ -18,9 +18,7 @@ public abstract class DAO {
     public Connection openDataBase() {
         Connection c = null;
         try {
-            System.out.println("a : "+c);
             c = connector.getConnection();
-            System.out.println("b : "+c);
         } catch (Exception e) {
             e.printStackTrace();
             System.err.println(e.getClass().getName()+": "+e.getMessage());

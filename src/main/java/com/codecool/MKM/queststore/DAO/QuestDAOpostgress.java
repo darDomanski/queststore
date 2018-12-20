@@ -51,7 +51,6 @@ public class QuestDAOpostgress extends DAO implements QuestDAO {
             String query = "SELECT * FROM quests WHERE id=" + questsId[i] + ";";
             Item quest = getQuestFromDataBase(query);
             questsList.add(quest);
-            System.out.println("tutaj : "+i);
         }
         return questsList;
     }
