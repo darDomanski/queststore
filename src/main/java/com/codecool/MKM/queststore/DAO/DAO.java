@@ -61,6 +61,7 @@ public abstract class DAO {
         return result;
     }
 
+
     protected void editDataBase(Connection connection, String query) {
 
         try {
@@ -81,17 +82,13 @@ public abstract class DAO {
 
         try {
             PreparedStatement statement = connection.prepareStatement(query);
-
             ResultSet rs = statement.executeQuery();
-
             while(rs.next()){
                 itemsList.add(new Item(rs.getInt("id"),rs.getString("firstname"),rs.getString("category"),rs.getInt("price")));
             }
-
         } catch(SQLException e) {
             e.printStackTrace();
         }
-
         return (ArrayList<Item>) itemsList;
     }
 
@@ -99,13 +96,9 @@ public abstract class DAO {
         Connection connection = openDataBase();
 
         try {
-
             PreparedStatement statement = connection.prepareStatement(query);
-
             statement.executeUpdate();
-
             closeStatementAndConnection(connection, statement);
-
         } catch (SQLException e) {
             e.printStackTrace();
         }

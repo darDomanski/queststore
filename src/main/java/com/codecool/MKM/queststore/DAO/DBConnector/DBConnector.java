@@ -10,7 +10,7 @@ public class DBConnector {
     private static DBConnector instance = new DBConnector();
     private static BasicDataSource dataSource;
 
-    private DBConnector(){
+    public DBConnector(){
         this.dataSource = new BasicDataSource();
         dataSource.setUrl("jdbc:postgresql://localhost:5432/questStore");
         dataSource.setUsername("postgres");
