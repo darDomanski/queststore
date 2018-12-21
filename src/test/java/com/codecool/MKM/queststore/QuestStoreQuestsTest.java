@@ -46,6 +46,7 @@ class QuestStoreQuestsTest {
     Connection connection;
     PreparedStatement preparedStatement;
     ResultSet resultSet;
+    ResultSet resultSet2;
     HttpExchange httpExchange;
     CookieHelper cookieHelper;
     Headers headers;
@@ -70,6 +71,7 @@ class QuestStoreQuestsTest {
         questStoreQuests = new QuestStoreQuests( connector );
         preparedStatement = mock(PreparedStatement.class);
         resultSet = mock(ResultSet.class);
+        resultSet2 = mock(ResultSet.class);
         httpExchange = mock(HttpExchange.class);
         cookieHelper = mock(CookieHelper.class);
         headers = mock(Headers.class);
@@ -97,30 +99,32 @@ class QuestStoreQuestsTest {
         int coolcoins = 100;
 
         when( connector.getConnection()).thenReturn( connection );
-        when( connection.prepareStatement("xxx")).thenReturn(preparedStatement);
+        when( connection.prepareStatement(anyString())).thenReturn(preparedStatement);
         when( preparedStatement.executeQuery()).thenReturn(resultSet);
+        when( resultSet.next()).thenReturn(true,false).thenReturn(true,false);
+//        when( resultSet2.next()).thenReturn(true,false);
 
-        when( resultSet.next()).thenReturn(true,false);
         when( httpExchange.getRequestMethod()).thenReturn("GET");
-        when( session.isSessionActive("xxx")).thenReturn(true);
-        when( session.getUserLogin( "xxx" )).thenReturn("yyy");
+//        when( session.isSessionActive("xxx")).thenReturn(true);
+//        when( session.getUserLogin( "xxx" )).thenReturn("yyy");
         when( questStore.getAllQuests()). thenReturn( quests );
         when( questStore.getAllCategories(quests) ).thenReturn(categories );
         when( httpExchange.getRequestHeaders()).thenReturn(headers);
         when( headers.getFirst(anyString())).thenReturn("sessionId=xxx");
-        when( studentController.getStudentByName(anyString())).thenReturn(student);
+//        when( studentController.getStudentByName(anyString())).thenReturn(student);
 
 //        when( student.get().getWallet() ).thenReturn(111);
 
-        when( questStore.getQuestsPictures()).thenReturn(questsPictures  );
-        when( questStore.getQuestsDescriptions()).thenReturn(questsDescriptions );
-        when( questStore.getProfilePicture("xx")).thenReturn("yy");
+//        when( questStore.getQuestsPictures()).thenReturn(questsPictures  );
+//        when( questStore.getQuestsDescriptions()).thenReturn(questsDescriptions );
+//        when( questStore.getProfilePicture("xx")).thenReturn("yy");
 
 //        when( JtwigTemplate.classpathTemplate("templates/store/quests.twig")).thenReturn(template);
 //        when( template.render(model)  );
 
         questStoreQuests.handle( httpExchange );
         verify( httpExchange ).sendResponseHeaders(303, 0);
+
         }
 
 }
