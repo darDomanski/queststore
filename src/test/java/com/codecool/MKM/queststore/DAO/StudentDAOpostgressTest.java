@@ -23,11 +23,11 @@ class StudentDAOpostgressTest {
     private StudentDAOpostgress studentDAOpostgressSpy;
 
     @Mock
-    Student student;
-    DBConnector connector;
-    Connection connection;
-    PreparedStatement statement;
-    ResultSet resultSet;
+    private Student student;
+    private DBConnector connector;
+    private Connection connection;
+    private PreparedStatement statement;
+    private ResultSet resultSet;
 
     @BeforeEach
     public void setUp() throws SQLException {
@@ -131,7 +131,7 @@ class StudentDAOpostgressTest {
         for (int i = 0; i < 3; i++) {
             listWithDefaultStudents.add(student);
         }
-        
+
         List<Student> listWithStudentsFound = studentDAOpostgressSpy.getAllStudentsSortedByGroup();
 
         assertEquals(listWithDefaultStudents.get(0).getGroup(), listWithStudentsFound.get(0).getGroup());

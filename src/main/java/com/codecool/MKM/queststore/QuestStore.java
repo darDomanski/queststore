@@ -21,14 +21,15 @@ import java.util.Optional;
 
 public class QuestStore implements HttpHandler {
     private final String SESSION_COOKIE_NAME = "sessionId";
-    CookieHelper cookieHelper = new CookieHelper();
-    SessionController session;
-    StoreController questStore;
-    StudentController studentController;
+    private CookieHelper cookieHelper;
+    private SessionController session;
+    private StoreController questStore;
+    private StudentController studentController;
     private DBConnector connector;
 
     public QuestStore(DBConnector connector) {
         this.connector = connector;
+        this.cookieHelper = new CookieHelper();
         this.session = new BasicSessionController(this.connector);
         this.questStore = new BasicStoreController(this.connector);
         this.studentController = new BasicStudentController(this.connector);
